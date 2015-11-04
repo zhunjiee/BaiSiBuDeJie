@@ -12,6 +12,7 @@
 #import "BSNewViewController.h"
 #import "BSFriendTrendsViewController.h"
 #import "BSMeViewController.h"
+#import "BSTabBar.h"
 
 @interface BSTabBarController ()
 
@@ -24,6 +25,35 @@
 
     [self setUpAllViewController];
     
+    [self setUpTabBarItemAttrs];
+    
+    [self setUpTabBar];
+}
+
+/**
+ *  通过KVC方式修改系统的私有成员属性TabBar
+ */
+- (void)setUpTabBar{
+    BSTabBar *tabBar = [[BSTabBar alloc] init];
+    
+    [self setValue:tabBar forKeyPath:@"tabBar"];
+}
+
+
+/**
+ *  通过appearance统一设置TabBar按钮的文字
+ */
+- (void)setUpTabBarItemAttrs{
+    UITabBarItem *item = [UITabBarItem appearance];
+    
+    NSMutableDictionary *normalAttrs = [NSMutableDictionary dictionary];
+    normalAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:13];
+    normalAttrs[NSForegroundColorAttributeName] = [UIColor grayColor];
+    [item setTitleTextAttributes:normalAttrs forState:UIControlStateNormal];
+    
+    NSMutableDictionary *selectedAttrs = [NSMutableDictionary dictionary];
+    selectedAttrs[NSForegroundColorAttributeName] = [UIColor blackColor];
+    [item setTitleTextAttributes:selectedAttrs forState:UIControlStateSelected];
 }
 
 /**
@@ -52,12 +82,11 @@
  *  @param title          TabBar按钮名称
  */
 - (void)setUpOneChildViewController:(UIViewController *)viewController image:(UIImage *)image selImage:(UIImage *)selImage title:(NSString *)title {
+    viewController.tabBarItem.image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    viewController.tabBarItem.selectedImage = [selImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    viewController.tabBarItem.title = title;
+    
     BSNavigationController *nav = [[BSNavigationController alloc] initWithRootViewController:viewController];
-    
-    nav.tabBarItem.image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    nav.tabBarItem.selectedImage = [selImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    
-    nav.tabBarItem.title = title;
     
     [self addChildViewController:nav];
 }

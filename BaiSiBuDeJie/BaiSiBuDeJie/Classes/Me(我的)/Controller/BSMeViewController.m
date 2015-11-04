@@ -16,14 +16,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    self.view.backgroundColor = BSRandomColor;
+    
+    self.navigationItem.title = @"我的";
+    
+    UIBarButtonItem *item1 = [UIBarButtonItem itemWithTarget:self action:@selector(settingButtonClick) normalImage:@"mine-setting-icon" highlightImage:@"mine-setting-icon-click"];
+    UIBarButtonItem *item2 = [UIBarButtonItem itemWithTarget:self action:nil normalImage:@"mine-moon-icon" highlightImage:@"mine-sun-icon-click"];
+    
+    self.navigationItem.rightBarButtonItems = @[item1, item2];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)settingButtonClick{
+    BSLogFunc;
 }
+
 
 /*
 #pragma mark - Navigation

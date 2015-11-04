@@ -2,11 +2,12 @@
 //  BSEssenceViewController.m
 //  BaiSiBuDeJie
 //
-//  Created by 侯宝伟 on 15/11/1.
+//  Created by 侯宝伟 on 15/11/4.
 //  Copyright © 2015年 ZHUNJIEE. All rights reserved.
 //
 
 #import "BSEssenceViewController.h"
+#import "BSTagSubViewController.h"
 
 @interface BSEssenceViewController ()
 
@@ -16,23 +17,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    self.view.backgroundColor = BSRandomColor;
+    
+    [self setUpNav];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+/**
+ *  导航栏相关设置
+ */
+- (void)setUpNav{
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
+    
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(mainTagSubIconClick) normalImage:@"MainTagSubIcon" highlightImage:@"MainTagSubIconClick"];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)mainTagSubIconClick{
+    BSTagSubViewController *tagSub = [[BSTagSubViewController alloc] init];
+    [self.navigationController pushViewController:tagSub animated:YES];
 }
-*/
 
 @end
