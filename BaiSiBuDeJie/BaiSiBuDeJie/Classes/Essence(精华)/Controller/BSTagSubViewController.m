@@ -7,92 +7,111 @@
 //
 
 #import "BSTagSubViewController.h"
+#import "BSHTTPSessionManager.h"
+#import "BSTagSub.h"
+#import "BSTagSubCell.h"
+#import <MJExtension.h>
+#import <SVProgressHUD.h>
 
 @interface BSTagSubViewController ()
-
+/** 请求管理者 */
+@property (nonatomic, weak) BSHTTPSessionManager *manager;
+/** 模型数组 */
+@property (nonatomic, strong) NSMutableArray *tagSubArray;
 @end
 
 @implementation BSTagSubViewController
 
+static NSString * const ID = @"tagCell";
+#pragma mark - 懒加载
+/** manager的懒加载 */
+- (BSHTTPSessionManager *)manager{
+    if (!_manager) {
+        _manager = [BSHTTPSessionManager manager];
+    }
+    return _manager;
+}
+/** tagSubArray的懒加载 */
+- (NSMutableArray *)tagSubArray{
+    if (!_tagSubArray) {
+        _tagSubArray = [NSMutableArray array];
+    }
+    return _tagSubArray;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    [self loadTags];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self setUpTableView];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setUpTableView{
+    self.tableView.backgroundColor = BSGlobalColor;
+    self.tableView.rowHeight = 70;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    // 注册cell
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([BSTagSubCell class]) bundle:nil] forCellReuseIdentifier:ID];
+}
+
+- (void)loadTags{
+    [SVProgressHUD show];
+    
+    NSDictionary *params = @{
+                             @"a" : @"tag_recommend",
+                             @"action" : @"sub",
+                             @"c" : @"topic",
+                             };
+    
+    BSWeakSelf;
+    [self.manager GET:BSBaseURL parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+
+        // 请求失败，关闭弹窗
+        if (responseObject == nil) {
+            [SVProgressHUD showErrorWithStatus:@"加载标签失败"];
+            return;
+        }
+        
+        weakSelf.tagSubArray = [BSTagSub objectArrayWithKeyValuesArray:responseObject];
+        
+        [weakSelf.tableView reloadData];
+        
+        [SVProgressHUD dismiss];
+    } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+        if (error.code == NSURLErrorCancelled) {
+            return;
+        }else if (error.code == NSURLErrorTimedOut){
+            [SVProgressHUD showErrorWithStatus:@"请求超时，请稍后再试"];
+        }
+        [SVProgressHUD showErrorWithStatus:@"加载标签失败"];
+    }];
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    
+    // 隐藏弹框
+    [SVProgressHUD dismiss];
+    // 取消任务
+    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
 }
 
 #pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+
+    return self.tagSubArray.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    BSTagSubCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     
-    // Configure the cell...
+    cell.tagSub = self.tagSubArray[indexPath.row];
     
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

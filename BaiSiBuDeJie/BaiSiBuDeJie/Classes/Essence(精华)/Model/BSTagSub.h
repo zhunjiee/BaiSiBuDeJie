@@ -9,5 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface BSTagSub : NSObject
-
+/** 头像 */
+@property (nonatomic, copy) NSString *image_list;
+/** 订阅数 */
+@property (nonatomic, assign) NSInteger sub_number;
+/** 名称 */
+@property (nonatomic, copy) NSString *theme_name;
 @end

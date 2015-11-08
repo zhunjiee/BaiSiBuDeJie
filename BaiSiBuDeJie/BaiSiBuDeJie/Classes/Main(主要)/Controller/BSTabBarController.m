@@ -66,10 +66,10 @@
     BSNewViewController *new = [[BSNewViewController alloc] init];
     [self setUpOneChildViewController:new image:[UIImage imageNamed:@"tabBar_new_icon"] selImage:[UIImage imageNamed:@"tabBar_new_click_icon"] title:@"新帖"];
     
-    BSFriendTrendsViewController *friendTrends = [[BSFriendTrendsViewController alloc] init];
+    BSFriendTrendsViewController *friendTrends = [UIStoryboard storyboardWithName:NSStringFromClass([BSFriendTrendsViewController class]) bundle:nil].instantiateInitialViewController;
     [self setUpOneChildViewController:friendTrends image:[UIImage imageNamed:@"tabBar_friendTrends_icon"] selImage:[UIImage imageNamed:@"tabBar_friendTrends_click_icon"] title:@"关注"];
     
-    BSMeViewController *me = [[BSMeViewController alloc] init];
+    BSMeViewController *me = [[BSMeViewController alloc] initWithStyle:UITableViewStyleGrouped];
     [self setUpOneChildViewController:me image:[UIImage imageNamed:@"tabBar_me_icon"] selImage:[UIImage imageNamed:@"tabBar_me_click_icon"] title:@"我的"];
 }
 

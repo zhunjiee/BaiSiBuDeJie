@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		21991D521084464CC5EB1F6C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A2F39AD052C5E138FCDB7F /* libPods.a */; };
 		8E24C4E31BE7894B00AEE4A3 /* BSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E24C4E21BE7894B00AEE4A3 /* BSTabBar.m */; };
+		8E431F381BEF179E0018B812 /* BSSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E431F371BEF179E0018B812 /* BSSettingViewController.m */; };
+		8E431F3B1BEF29940018B812 /* BSClearCachesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E431F3A1BEF29940018B812 /* BSClearCachesCell.m */; };
+		8E431F3E1BEF3CF00018B812 /* NSString+BSFileSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E431F3D1BEF3CF00018B812 /* NSString+BSFileSize.m */; };
+		8E5BFF471BEBA85F00541669 /* BSRecommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5BFF461BEBA85F00541669 /* BSRecommentViewController.m */; };
+		8E5BFF491BEBAA4000541669 /* BSFriendTrendsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E5BFF481BEBAA4000541669 /* BSFriendTrendsViewController.storyboard */; };
+		8E5BFF4C1BEBB28D00541669 /* BSLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5BFF4B1BEBB28D00541669 /* BSLoginRegisterViewController.m */; };
+		8E8270931BEA239C00031498 /* BSConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8270921BEA239C00031498 /* BSConst.m */; };
+		8E8270961BEA4DBE00031498 /* UIImage+BSCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8270951BEA4DBE00031498 /* UIImage+BSCircle.m */; };
+		8E8270991BEA552700031498 /* UIImageView+BSHeaderImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8270981BEA552700031498 /* UIImageView+BSHeaderImage.m */; };
 		8E83EF461BE98FC00098413D /* UIView+BSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E83EF451BE98FC00098413D /* UIView+BSExtension.m */; };
 		8E83EF491BE9A2730098413D /* BSEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E83EF481BE9A2730098413D /* BSEssenceViewController.m */; };
 		8E83EF4F1BE9B8D50098413D /* UIBarButtonItem+BSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E83EF4E1BE9B8D50098413D /* UIBarButtonItem+BSExtension.m */; };
@@ -16,8 +25,17 @@
 		8E83EF561BE9F6D70098413D /* BSTagSubCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E83EF541BE9F6D70098413D /* BSTagSubCell.m */; };
 		8E83EF571BE9F6D70098413D /* BSTagSubCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E83EF551BE9F6D70098413D /* BSTagSubCell.xib */; };
 		8E83EF5A1BE9F9260098413D /* BSTagSub.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E83EF591BE9F9260098413D /* BSTagSub.m */; };
+		8EA21ECF1BEC56F300C0D1CB /* BSQuickLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA21ECE1BEC56F300C0D1CB /* BSQuickLoginButton.m */; };
+		8EA21ED21BEC860700C0D1CB /* BSPlaceholderTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA21ED11BEC860700C0D1CB /* BSPlaceholderTextField.m */; };
 		8EAC13F51BE8DEE500AA0CF3 /* BSPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAC13F31BE8DEE500AA0CF3 /* BSPublishViewController.m */; };
 		8EAC13F61BE8DEE500AA0CF3 /* BSPublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EAC13F41BE8DEE500AA0CF3 /* BSPublishViewController.xib */; };
+		8EB2932F1BEDF9A000E6E15C /* BSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB2932E1BEDF9A000E6E15C /* BSWebViewController.m */; };
+		8EB293331BEDFF9600E6E15C /* BSWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EB293321BEDFF9600E6E15C /* BSWebViewController.xib */; };
+		8EBA9B6A1BED9D320016819F /* UITextField+BSPlaceholderColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBA9B691BED9D320016819F /* UITextField+BSPlaceholderColor.m */; };
+		8EBA9B6D1BEDD07F0016819F /* BSMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBA9B6C1BEDD07F0016819F /* BSMeCell.m */; };
+		8EBA9B701BEDD4390016819F /* BSFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBA9B6F1BEDD4390016819F /* BSFooterView.m */; };
+		8EBA9B731BEDDB020016819F /* BSSquareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBA9B721BEDDB020016819F /* BSSquareButton.m */; };
+		8EBA9B761BEDDE430016819F /* BSSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBA9B751BEDDE430016819F /* BSSquare.m */; };
 		8EF6BC131BE5E58B0081E76E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EF6BC121BE5E58B0081E76E /* Assets.xcassets */; };
 		8EF6BC211BE5E58B0081E76E /* BaiSiBuDeJieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF6BC201BE5E58B0081E76E /* BaiSiBuDeJieTests.m */; };
 		8EF6BC2C1BE5E58B0081E76E /* BaiSiBuDeJieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF6BC2B1BE5E58B0081E76E /* BaiSiBuDeJieUITests.m */; };
@@ -52,6 +70,23 @@
 		3A3F197724067FC86704FE8B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8E24C4E11BE7894B00AEE4A3 /* BSTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTabBar.h; sourceTree = "<group>"; };
 		8E24C4E21BE7894B00AEE4A3 /* BSTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTabBar.m; sourceTree = "<group>"; };
+		8E431F361BEF179E0018B812 /* BSSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSSettingViewController.h; sourceTree = "<group>"; };
+		8E431F371BEF179E0018B812 /* BSSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSSettingViewController.m; sourceTree = "<group>"; };
+		8E431F391BEF29940018B812 /* BSClearCachesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSClearCachesCell.h; sourceTree = "<group>"; };
+		8E431F3A1BEF29940018B812 /* BSClearCachesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSClearCachesCell.m; sourceTree = "<group>"; };
+		8E431F3C1BEF3CF00018B812 /* NSString+BSFileSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+BSFileSize.h"; sourceTree = "<group>"; };
+		8E431F3D1BEF3CF00018B812 /* NSString+BSFileSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+BSFileSize.m"; sourceTree = "<group>"; };
+		8E5BFF451BEBA85F00541669 /* BSRecommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommentViewController.h; sourceTree = "<group>"; };
+		8E5BFF461BEBA85F00541669 /* BSRecommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecommentViewController.m; sourceTree = "<group>"; };
+		8E5BFF481BEBAA4000541669 /* BSFriendTrendsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BSFriendTrendsViewController.storyboard; sourceTree = "<group>"; };
+		8E5BFF4A1BEBB28D00541669 /* BSLoginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSLoginRegisterViewController.h; sourceTree = "<group>"; };
+		8E5BFF4B1BEBB28D00541669 /* BSLoginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSLoginRegisterViewController.m; sourceTree = "<group>"; };
+		8E8270911BEA239C00031498 /* BSConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSConst.h; sourceTree = "<group>"; };
+		8E8270921BEA239C00031498 /* BSConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSConst.m; sourceTree = "<group>"; };
+		8E8270941BEA4DBE00031498 /* UIImage+BSCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BSCircle.h"; sourceTree = "<group>"; };
+		8E8270951BEA4DBE00031498 /* UIImage+BSCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BSCircle.m"; sourceTree = "<group>"; };
+		8E8270971BEA552700031498 /* UIImageView+BSHeaderImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+BSHeaderImage.h"; sourceTree = "<group>"; };
+		8E8270981BEA552700031498 /* UIImageView+BSHeaderImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+BSHeaderImage.m"; sourceTree = "<group>"; };
 		8E83EF441BE98FC00098413D /* UIView+BSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BSExtension.h"; sourceTree = "<group>"; };
 		8E83EF451BE98FC00098413D /* UIView+BSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BSExtension.m"; sourceTree = "<group>"; };
 		8E83EF471BE9A2730098413D /* BSEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSEssenceViewController.h; sourceTree = "<group>"; };
@@ -65,9 +100,26 @@
 		8E83EF551BE9F6D70098413D /* BSTagSubCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSTagSubCell.xib; sourceTree = "<group>"; };
 		8E83EF581BE9F9260098413D /* BSTagSub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTagSub.h; sourceTree = "<group>"; };
 		8E83EF591BE9F9260098413D /* BSTagSub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTagSub.m; sourceTree = "<group>"; };
+		8EA21ECD1BEC56F300C0D1CB /* BSQuickLoginButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSQuickLoginButton.h; sourceTree = "<group>"; };
+		8EA21ECE1BEC56F300C0D1CB /* BSQuickLoginButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSQuickLoginButton.m; sourceTree = "<group>"; };
+		8EA21ED01BEC860700C0D1CB /* BSPlaceholderTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPlaceholderTextField.h; sourceTree = "<group>"; };
+		8EA21ED11BEC860700C0D1CB /* BSPlaceholderTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPlaceholderTextField.m; sourceTree = "<group>"; };
 		8EAC13F21BE8DEE500AA0CF3 /* BSPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPublishViewController.h; sourceTree = "<group>"; };
 		8EAC13F31BE8DEE500AA0CF3 /* BSPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPublishViewController.m; sourceTree = "<group>"; };
 		8EAC13F41BE8DEE500AA0CF3 /* BSPublishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSPublishViewController.xib; sourceTree = "<group>"; };
+		8EB2932D1BEDF9A000E6E15C /* BSWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSWebViewController.h; sourceTree = "<group>"; };
+		8EB2932E1BEDF9A000E6E15C /* BSWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSWebViewController.m; sourceTree = "<group>"; };
+		8EB293321BEDFF9600E6E15C /* BSWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSWebViewController.xib; sourceTree = "<group>"; };
+		8EBA9B681BED9D320016819F /* UITextField+BSPlaceholderColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+BSPlaceholderColor.h"; sourceTree = "<group>"; };
+		8EBA9B691BED9D320016819F /* UITextField+BSPlaceholderColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+BSPlaceholderColor.m"; sourceTree = "<group>"; };
+		8EBA9B6B1BEDD07F0016819F /* BSMeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMeCell.h; sourceTree = "<group>"; };
+		8EBA9B6C1BEDD07F0016819F /* BSMeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMeCell.m; sourceTree = "<group>"; };
+		8EBA9B6E1BEDD4390016819F /* BSFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSFooterView.h; sourceTree = "<group>"; };
+		8EBA9B6F1BEDD4390016819F /* BSFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSFooterView.m; sourceTree = "<group>"; };
+		8EBA9B711BEDDB020016819F /* BSSquareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSSquareButton.h; sourceTree = "<group>"; };
+		8EBA9B721BEDDB020016819F /* BSSquareButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSSquareButton.m; sourceTree = "<group>"; };
+		8EBA9B741BEDDE430016819F /* BSSquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSSquare.h; sourceTree = "<group>"; };
+		8EBA9B751BEDDE430016819F /* BSSquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSSquare.m; sourceTree = "<group>"; };
 		8EF6BC031BE5E58B0081E76E /* BaiSiBuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiSiBuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EF6BC121BE5E58B0081E76E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8EF6BC171BE5E58B0081E76E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -260,6 +312,11 @@
 			children = (
 				8EF6BC6C1BE5F0870081E76E /* BSFriendTrendsViewController.h */,
 				8EF6BC6D1BE5F0870081E76E /* BSFriendTrendsViewController.m */,
+				8E5BFF481BEBAA4000541669 /* BSFriendTrendsViewController.storyboard */,
+				8E5BFF451BEBA85F00541669 /* BSRecommentViewController.h */,
+				8E5BFF461BEBA85F00541669 /* BSRecommentViewController.m */,
+				8E5BFF4A1BEBB28D00541669 /* BSLoginRegisterViewController.h */,
+				8E5BFF4B1BEBB28D00541669 /* BSLoginRegisterViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -274,6 +331,10 @@
 		8EF6BC471BE5F02C0081E76E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8EA21ECD1BEC56F300C0D1CB /* BSQuickLoginButton.h */,
+				8EA21ECE1BEC56F300C0D1CB /* BSQuickLoginButton.m */,
+				8EA21ED01BEC860700C0D1CB /* BSPlaceholderTextField.h */,
+				8EA21ED11BEC860700C0D1CB /* BSPlaceholderTextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -330,6 +391,9 @@
 			children = (
 				8EF6BC721BE5F0E90081E76E /* BSMeViewController.h */,
 				8EF6BC731BE5F0E90081E76E /* BSMeViewController.m */,
+				8EB2932D1BEDF9A000E6E15C /* BSWebViewController.h */,
+				8EB2932E1BEDF9A000E6E15C /* BSWebViewController.m */,
+				8EB293321BEDFF9600E6E15C /* BSWebViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -337,6 +401,8 @@
 		8EF6BC521BE5F02C0081E76E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8EBA9B741BEDDE430016819F /* BSSquare.h */,
+				8EBA9B751BEDDE430016819F /* BSSquare.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -344,6 +410,12 @@
 		8EF6BC531BE5F02C0081E76E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8EBA9B6B1BEDD07F0016819F /* BSMeCell.h */,
+				8EBA9B6C1BEDD07F0016819F /* BSMeCell.m */,
+				8EBA9B6E1BEDD4390016819F /* BSFooterView.h */,
+				8EBA9B6F1BEDD4390016819F /* BSFooterView.m */,
+				8EBA9B711BEDDB020016819F /* BSSquareButton.h */,
+				8EBA9B721BEDDB020016819F /* BSSquareButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -384,13 +456,15 @@
 		8EF6BC581BE5F02C0081E76E /* Other(其他) */ = {
 			isa = PBXGroup;
 			children = (
+				8EF6BC5B1BE5F02C0081E76E /* Category */,
+				8EFDA5AD1BE9FBE900D53ABB /* BSHTTPSessionManager.h */,
+				8EFDA5AE1BE9FBE900D53ABB /* BSHTTPSessionManager.m */,
+				8EF6BC751BE5F6AC0081E76E /* BaiSiBuDeJie.pch */,
 				8EF6BC591BE5F02C0081E76E /* AppDelegate.h */,
 				8EF6BC5A1BE5F02C0081E76E /* AppDelegate.m */,
 				8EF6BC5C1BE5F02C0081E76E /* main.m */,
-				8EF6BC5B1BE5F02C0081E76E /* Category */,
-				8EF6BC751BE5F6AC0081E76E /* BaiSiBuDeJie.pch */,
-				8EFDA5AD1BE9FBE900D53ABB /* BSHTTPSessionManager.h */,
-				8EFDA5AE1BE9FBE900D53ABB /* BSHTTPSessionManager.m */,
+				8E8270911BEA239C00031498 /* BSConst.h */,
+				8E8270921BEA239C00031498 /* BSConst.m */,
 			);
 			path = "Other(其他)";
 			sourceTree = "<group>";
@@ -402,6 +476,14 @@
 				8E83EF451BE98FC00098413D /* UIView+BSExtension.m */,
 				8E83EF4D1BE9B8D50098413D /* UIBarButtonItem+BSExtension.h */,
 				8E83EF4E1BE9B8D50098413D /* UIBarButtonItem+BSExtension.m */,
+				8E8270941BEA4DBE00031498 /* UIImage+BSCircle.h */,
+				8E8270951BEA4DBE00031498 /* UIImage+BSCircle.m */,
+				8E8270971BEA552700031498 /* UIImageView+BSHeaderImage.h */,
+				8E8270981BEA552700031498 /* UIImageView+BSHeaderImage.m */,
+				8EBA9B681BED9D320016819F /* UITextField+BSPlaceholderColor.h */,
+				8EBA9B691BED9D320016819F /* UITextField+BSPlaceholderColor.m */,
+				8E431F3C1BEF3CF00018B812 /* NSString+BSFileSize.h */,
+				8E431F3D1BEF3CF00018B812 /* NSString+BSFileSize.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -453,6 +535,8 @@
 		8EF6BC621BE5F02C0081E76E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8E431F361BEF179E0018B812 /* BSSettingViewController.h */,
+				8E431F371BEF179E0018B812 /* BSSettingViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -467,6 +551,8 @@
 		8EF6BC641BE5F02C0081E76E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8E431F391BEF29940018B812 /* BSClearCachesCell.h */,
+				8E431F3A1BEF29940018B812 /* BSClearCachesCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -587,6 +673,8 @@
 			files = (
 				8EF6BC131BE5E58B0081E76E /* Assets.xcassets in Resources */,
 				8E83EF571BE9F6D70098413D /* BSTagSubCell.xib in Resources */,
+				8E5BFF491BEBAA4000541669 /* BSFriendTrendsViewController.storyboard in Resources */,
+				8EB293331BEDFF9600E6E15C /* BSWebViewController.xib in Resources */,
 				8EAC13F61BE8DEE500AA0CF3 /* BSPublishViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -648,19 +736,35 @@
 				8E24C4E31BE7894B00AEE4A3 /* BSTabBar.m in Sources */,
 				8EF6BC661BE5F02C0081E76E /* BSTabBarController.m in Sources */,
 				8EF6BC6E1BE5F0870081E76E /* BSFriendTrendsViewController.m in Sources */,
+				8E431F3E1BEF3CF00018B812 /* NSString+BSFileSize.m in Sources */,
+				8EBA9B6D1BEDD07F0016819F /* BSMeCell.m in Sources */,
+				8E8270991BEA552700031498 /* UIImageView+BSHeaderImage.m in Sources */,
 				8E83EF5A1BE9F9260098413D /* BSTagSub.m in Sources */,
 				8EF6BC711BE5F0DD0081E76E /* BSNewViewController.m in Sources */,
 				8EFDA5AF1BE9FBE900D53ABB /* BSHTTPSessionManager.m in Sources */,
 				8E83EF461BE98FC00098413D /* UIView+BSExtension.m in Sources */,
+				8EA21ECF1BEC56F300C0D1CB /* BSQuickLoginButton.m in Sources */,
+				8EA21ED21BEC860700C0D1CB /* BSPlaceholderTextField.m in Sources */,
+				8E5BFF471BEBA85F00541669 /* BSRecommentViewController.m in Sources */,
 				8E83EF491BE9A2730098413D /* BSEssenceViewController.m in Sources */,
+				8E8270961BEA4DBE00031498 /* UIImage+BSCircle.m in Sources */,
+				8EBA9B701BEDD4390016819F /* BSFooterView.m in Sources */,
 				8E83EF521BE9ECD50098413D /* BSTagSubViewController.m in Sources */,
+				8E5BFF4C1BEBB28D00541669 /* BSLoginRegisterViewController.m in Sources */,
 				8EF6BC651BE5F02C0081E76E /* BSNavigationController.m in Sources */,
+				8EBA9B6A1BED9D320016819F /* UITextField+BSPlaceholderColor.m in Sources */,
+				8EBA9B731BEDDB020016819F /* BSSquareButton.m in Sources */,
 				8E83EF561BE9F6D70098413D /* BSTagSubCell.m in Sources */,
 				8E83EF4F1BE9B8D50098413D /* UIBarButtonItem+BSExtension.m in Sources */,
+				8EB2932F1BEDF9A000E6E15C /* BSWebViewController.m in Sources */,
 				8EF6BC681BE5F02C0081E76E /* main.m in Sources */,
+				8EBA9B761BEDDE430016819F /* BSSquare.m in Sources */,
 				8EF6BC741BE5F0E90081E76E /* BSMeViewController.m in Sources */,
+				8E8270931BEA239C00031498 /* BSConst.m in Sources */,
 				8EAC13F51BE8DEE500AA0CF3 /* BSPublishViewController.m in Sources */,
+				8E431F381BEF179E0018B812 /* BSSettingViewController.m in Sources */,
 				8EF6BC671BE5F02C0081E76E /* AppDelegate.m in Sources */,
+				8E431F3B1BEF29940018B812 /* BSClearCachesCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

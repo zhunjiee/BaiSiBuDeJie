@@ -15,7 +15,20 @@
     [button setImage:[UIImage imageNamed:normalImage] forState:UIControlStateNormal];
     [button setImage:[UIImage imageNamed:highlightImage] forState:UIControlStateHighlighted];
     [button sizeToFit];
+
     [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    return [[self alloc] initWithCustomView:button];
+}
+
+
++ (instancetype)itemWithTarget:(id)target action:(SEL)action normalImage:(NSString *)normalImage selImage:(NSString *)selImage{
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setImage:[UIImage imageNamed:normalImage] forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:selImage] forState:UIControlStateSelected];
+    [button sizeToFit];
+    
+    [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    
     return [[self alloc] initWithCustomView:button];
 }
 

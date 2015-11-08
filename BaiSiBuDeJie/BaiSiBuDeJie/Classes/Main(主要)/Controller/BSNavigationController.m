@@ -8,7 +8,7 @@
 
 #import "BSNavigationController.h"
 
-@interface BSNavigationController ()
+@interface BSNavigationController () <UIGestureRecognizerDelegate>
 
 @end
 
@@ -28,7 +28,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    // 设置pop手势代理
+    self.interactivePopGestureRecognizer.delegate = self;
 }
 
 
@@ -58,6 +59,12 @@
 
 - (void)cancelButtonClick{
     [self popViewControllerAnimated:YES];
+}
+
+#pragma mark - UIGestureRecognizerDelegate
+// 是否启用手势
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
+    return self.childViewControllers.count > 1;
 }
 
 @end

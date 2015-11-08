@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BSWebViewController">
+            <connections>
+                <outlet property="backward" destination="u0Y-sW-9id" id="KfH-Oe-xe9"/>
+                <outlet property="forward" destination="dmt-s3-C0d" id="NCH-5S-DZz"/>
+                <outlet property="view" destination="3XQ-DA-Exd" id="ts8-6I-DEJ"/>
+                <outlet property="webView" destination="Jrv-Ri-6vl" id="LM2-IX-Usn"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="3XQ-DA-Exd">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jrv-Ri-6vl">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </webView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dP5-zY-qaM">
+                    <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                    <animations/>
+                    <items>
+                        <barButtonItem enabled="NO" image="arrow_backward" id="u0Y-sW-9id" userLabel="backward">
+                            <connections>
+                                <action selector="backward:" destination="-1" id="lFw-Bb-6Pa"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem enabled="NO" title="Item" image="arrow_forward" id="dmt-s3-C0d" userLabel="forward">
+                            <connections>
+                                <action selector="forward:" destination="-1" id="2EK-md-QtJ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem systemItem="flexibleSpace" id="edy-AN-ing"/>
+                        <barButtonItem systemItem="refresh" id="E6i-iO-v1z"/>
+                    </items>
+                </toolbar>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="dP5-zY-qaM" firstAttribute="leading" secondItem="3XQ-DA-Exd" secondAttribute="leading" id="7Wr-2s-Zok"/>
+                <constraint firstItem="Jrv-Ri-6vl" firstAttribute="top" secondItem="3XQ-DA-Exd" secondAttribute="top" id="G7I-AL-JCw"/>
+                <constraint firstItem="dP5-zY-qaM" firstAttribute="top" secondItem="Jrv-Ri-6vl" secondAttribute="bottom" id="OdA-L6-z0A"/>
+                <constraint firstAttribute="trailing" secondItem="Jrv-Ri-6vl" secondAttribute="trailing" id="bHU-AM-AyB"/>
+                <constraint firstItem="Jrv-Ri-6vl" firstAttribute="leading" secondItem="3XQ-DA-Exd" secondAttribute="leading" id="f4d-oA-f1S"/>
+                <constraint firstAttribute="bottom" secondItem="dP5-zY-qaM" secondAttribute="bottom" id="izT-iC-OQk"/>
+                <constraint firstAttribute="trailing" secondItem="dP5-zY-qaM" secondAttribute="trailing" id="tRH-jd-oPe"/>
+            </constraints>
+            <point key="canvasLocation" x="186" y="339"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow_backward" width="30" height="30"/>
+        <image name="arrow_forward" width="30" height="30"/>
+    </resources>
+</document>

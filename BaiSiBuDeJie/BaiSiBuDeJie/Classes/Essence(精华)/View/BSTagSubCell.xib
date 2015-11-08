@@ -39,6 +39,9 @@
                         <state key="normal" title="+ 订阅" backgroundImage="mainCellBackground">
                             <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
+                        <connections>
+                            <action selector="subButtonClick" destination="KGk-i7-Jjw" eventType="touchUpInside" id="LkP-xq-i7L"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXc-EA-d4R">
                         <rect key="frame" x="70" y="39" width="117" height="20.5"/>
@@ -61,6 +64,11 @@
                 </constraints>
             </tableViewCellContentView>
             <animations/>
+            <connections>
+                <outlet property="headerImageView" destination="SrR-WE-9nQ" id="zPa-Rb-prn"/>
+                <outlet property="nameLabel" destination="L10-mm-udp" id="M5G-eR-Zrk"/>
+                <outlet property="subCountLabel" destination="IXc-EA-d4R" id="Dgq-fy-12n"/>
+            </connections>
             <point key="canvasLocation" x="311" y="333"/>
         </tableViewCell>
     </objects>

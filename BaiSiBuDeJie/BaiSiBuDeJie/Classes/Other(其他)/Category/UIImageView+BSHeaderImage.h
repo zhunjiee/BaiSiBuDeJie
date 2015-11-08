@@ -1,5 +1,5 @@
 //
-//  BSTagSubCell.h
+//  UIImageView+BSHeaderImage.h
 //  BaiSiBuDeJie
 //
 //  Created by 侯宝伟 on 15/11/4.
@@ -7,11 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-@class BSTagSub;
 
-@interface BSTagSubCell : UITableViewCell
+@interface UIImageView (BSHeaderImage)
 
-/** 推荐标签模型 */
-@property (nonatomic, strong) BSTagSub *tagSub;
+- (void)setHeaderImage:(NSURL *)url;
 
 @end

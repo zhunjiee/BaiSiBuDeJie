@@ -33,6 +33,7 @@
 - (void)publishBtnClick{
     BSPublishViewController *publishVc = [[BSPublishViewController alloc] init];
     
+//    publishVc.modalTransitionStyle = UIModalTransitionStylePartialCurl;
     [self.window.rootViewController presentViewController:publishVc animated:YES completion:nil];
 }
 

@@ -7,6 +7,7 @@
 //
 
 #import "BSFriendTrendsViewController.h"
+#import "BSRecommentViewController.h"
 
 @interface BSFriendTrendsViewController ()
 
@@ -17,17 +18,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = BSGlobalColor;
+    
+    [self setUpNav];
+}
+
+- (void)setUpNav{
     self.navigationItem.title = @"关注";
+    
+    UIBarButtonItem *item = [UIBarButtonItem itemWithTarget:self action:@selector(friendsRecommentClick) normalImage:@"friendsRecommentIcon" highlightImage:@"friendsRecommentIcon-click"];
+    
+    self.navigationItem.leftBarButtonItem = item;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)friendsRecommentClick{
+    [self performSegueWithIdentifier:@"friendsTrendsToRecomment" sender:nil];
 }
-*/
+
+- (IBAction)backToFriendsTrendsViewController:(UIStoryboardSegue *)segue{
+    BSLog(@"从%@控制器退出", segue.sourceViewController);
+}
 
 @end

@@ -14,4 +14,8 @@
  */
 + (instancetype)itemWithTarget:(id)target action:(SEL)action normalImage:(NSString *)normalImage highlightImage:(NSString *)highlightImage;
 
+/**
+ *  自定义TabBar按钮checkbox效果
+ */
++ (instancetype)itemWithTarget:(id)target action:(SEL)action normalImage:(NSString *)normalImage selImage:(NSString *)selImage;
 @end
