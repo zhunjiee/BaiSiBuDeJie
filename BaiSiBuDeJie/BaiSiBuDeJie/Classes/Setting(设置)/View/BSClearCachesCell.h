@@ -10,4 +10,9 @@
 
 @interface BSClearCachesCell : UITableViewCell
 
+/**
+ *  缓存初始化
+ */
+- (void)reset;
+
 @end

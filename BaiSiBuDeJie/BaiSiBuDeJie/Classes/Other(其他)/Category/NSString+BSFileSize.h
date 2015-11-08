@@ -10,4 +10,14 @@
 
 @interface NSString (BSFileSize)
 
+/**
+ *  获取文件的大小
+ */
+- (unsigned long long)fileSize;
+
+/**
+ *  以字符串形式返回文件大小
+ */
+- (NSString *)fileSizeString;
+
 @end

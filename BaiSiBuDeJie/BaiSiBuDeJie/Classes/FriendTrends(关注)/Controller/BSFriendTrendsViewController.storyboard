@@ -80,10 +80,46 @@
                     <view key="view" contentMode="scaleToFill" id="VaE-yu-cV1">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WDm-4l-whE" userLabel="Category Table View">
+                                <rect key="frame" x="0.0" y="0.0" width="70" height="600"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="jZh-aA-oKa"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="n9Q-2I-25O" id="YPF-5d-kie"/>
+                                    <outlet property="delegate" destination="n9Q-2I-25O" id="aY9-U1-fQl"/>
+                                </connections>
+                            </tableView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QDR-s5-dzx" userLabel="Recommend Users Table View">
+                                <rect key="frame" x="70" y="0.0" width="530" height="600"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="n9Q-2I-25O" id="JDi-4w-gN6"/>
+                                    <outlet property="delegate" destination="n9Q-2I-25O" id="z6q-Pv-XHt"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RD6-sg-LTR" firstAttribute="top" secondItem="QDR-s5-dzx" secondAttribute="bottom" id="3dG-Oe-YBM"/>
+                            <constraint firstItem="RD6-sg-LTR" firstAttribute="top" secondItem="WDm-4l-whE" secondAttribute="bottom" id="43O-8c-ojP"/>
+                            <constraint firstItem="QDR-s5-dzx" firstAttribute="top" secondItem="VaE-yu-cV1" secondAttribute="top" id="86B-cg-41B"/>
+                            <constraint firstAttribute="trailing" secondItem="QDR-s5-dzx" secondAttribute="trailing" id="9KK-Jp-14n"/>
+                            <constraint firstItem="QDR-s5-dzx" firstAttribute="leading" secondItem="WDm-4l-whE" secondAttribute="trailing" id="gL8-zb-Gag"/>
+                            <constraint firstItem="WDm-4l-whE" firstAttribute="leading" secondItem="VaE-yu-cV1" secondAttribute="leading" id="xY9-wE-D85"/>
+                            <constraint firstItem="WDm-4l-whE" firstAttribute="top" secondItem="VaE-yu-cV1" secondAttribute="top" id="xiZ-iq-ooO"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="b06-9b-oRx"/>
+                    <connections>
+                        <outlet property="categoryTableView" destination="WDm-4l-whE" id="gWa-V2-Vb5"/>
+                        <outlet property="usersTableView" destination="QDR-s5-dzx" id="jWF-IO-iCZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fAB-Wo-xlQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

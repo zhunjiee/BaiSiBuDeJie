@@ -33,6 +33,8 @@
 #import "UIImage+BSCircle.h"
 #import "UIImageView+BSHeaderImage.h"
 #import "UITextField+BSPlaceholderColor.h"
+#import "NSString+BSFileSize.h"
+
 
 /** self的弱引用 */
 #define BSWeakSelf __weak typeof(self) weakSelf = self;

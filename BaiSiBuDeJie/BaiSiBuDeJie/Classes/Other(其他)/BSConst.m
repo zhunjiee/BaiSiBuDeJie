@@ -8,3 +8,6 @@ CGFloat const BSMargin = 10;
 
 /** 首个cell的Y值 */
 CGFloat const BSFirstCellTopY = 35;
+
+/** 导航栏最大Y值 */
+CGFloat const BSNavMaxY = 64;

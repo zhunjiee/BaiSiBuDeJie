@@ -8,8 +8,10 @@
 
 #import "BSSettingViewController.h"
 #import "BSClearCachesCell.h"
+#import <SVProgressHUD.h>
+#import <SDImageCache.h>
 
-@interface BSSettingViewController ()
+@interface BSSettingViewController () <UITableViewDelegate>
 
 @end
 
@@ -20,6 +22,7 @@ static NSString * const BSOtherCellID = @"otherCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.tableView.delegate = self;
     self.navigationItem.title = @"设置";
     self.tableView.backgroundColor = BSGlobalColor;
     
@@ -52,4 +55,18 @@ static NSString * const BSOtherCellID = @"otherCell";
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    /** -----删除缓存----- */
+    if (indexPath.section == 0) {
+        [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
+        [[SDImageCache sharedImageCache] clearDiskOnCompletion:^{
+            [SVProgressHUD showSuccessWithStatus:@"清除缓存成功"];
+            
+            BSClearCachesCell *cell = (BSClearCachesCell *)[tableView cellForRowAtIndexPath:indexPath];
+            [cell reset];
+        }];
+    }
+}
 @end
