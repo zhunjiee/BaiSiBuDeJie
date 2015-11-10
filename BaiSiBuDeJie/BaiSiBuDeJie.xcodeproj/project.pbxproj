@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		21991D521084464CC5EB1F6C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A2F39AD052C5E138FCDB7F /* libPods.a */; };
 		8E24C4E31BE7894B00AEE4A3 /* BSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E24C4E21BE7894B00AEE4A3 /* BSTabBar.m */; };
+		8E33191F1BF0679600DE0A08 /* BSRecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E33191E1BF0679600DE0A08 /* BSRecommendCategory.m */; };
+		8E3319221BF067A600DE0A08 /* BSRecommendUsers.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3319211BF067A600DE0A08 /* BSRecommendUsers.m */; };
+		8E3319251BF067D000DE0A08 /* BSRecommendCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3319241BF067D000DE0A08 /* BSRecommendCategoryCell.m */; };
+		8E3319281BF067E300DE0A08 /* BSRecommendUsersCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3319271BF067E300DE0A08 /* BSRecommendUsersCell.m */; };
+		8E33192B1BF0820100DE0A08 /* BSExtensionConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E33192A1BF0820100DE0A08 /* BSExtensionConfig.m */; };
 		8E431F381BEF179E0018B812 /* BSSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E431F371BEF179E0018B812 /* BSSettingViewController.m */; };
 		8E431F3B1BEF29940018B812 /* BSClearCachesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E431F3A1BEF29940018B812 /* BSClearCachesCell.m */; };
 		8E431F3E1BEF3CF00018B812 /* NSString+BSFileSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E431F3D1BEF3CF00018B812 /* NSString+BSFileSize.m */; };
@@ -70,6 +75,16 @@
 		3A3F197724067FC86704FE8B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8E24C4E11BE7894B00AEE4A3 /* BSTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTabBar.h; sourceTree = "<group>"; };
 		8E24C4E21BE7894B00AEE4A3 /* BSTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTabBar.m; sourceTree = "<group>"; };
+		8E33191D1BF0679600DE0A08 /* BSRecommendCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommendCategory.h; sourceTree = "<group>"; };
+		8E33191E1BF0679600DE0A08 /* BSRecommendCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecommendCategory.m; sourceTree = "<group>"; };
+		8E3319201BF067A600DE0A08 /* BSRecommendUsers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommendUsers.h; sourceTree = "<group>"; };
+		8E3319211BF067A600DE0A08 /* BSRecommendUsers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecommendUsers.m; sourceTree = "<group>"; };
+		8E3319231BF067D000DE0A08 /* BSRecommendCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommendCategoryCell.h; sourceTree = "<group>"; };
+		8E3319241BF067D000DE0A08 /* BSRecommendCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecommendCategoryCell.m; sourceTree = "<group>"; };
+		8E3319261BF067E300DE0A08 /* BSRecommendUsersCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommendUsersCell.h; sourceTree = "<group>"; };
+		8E3319271BF067E300DE0A08 /* BSRecommendUsersCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecommendUsersCell.m; sourceTree = "<group>"; };
+		8E3319291BF0820100DE0A08 /* BSExtensionConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSExtensionConfig.h; sourceTree = "<group>"; };
+		8E33192A1BF0820100DE0A08 /* BSExtensionConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSExtensionConfig.m; sourceTree = "<group>"; };
 		8E431F361BEF179E0018B812 /* BSSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSSettingViewController.h; sourceTree = "<group>"; };
 		8E431F371BEF179E0018B812 /* BSSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSSettingViewController.m; sourceTree = "<group>"; };
 		8E431F391BEF29940018B812 /* BSClearCachesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSClearCachesCell.h; sourceTree = "<group>"; };
@@ -313,10 +328,10 @@
 				8EF6BC6C1BE5F0870081E76E /* BSFriendTrendsViewController.h */,
 				8EF6BC6D1BE5F0870081E76E /* BSFriendTrendsViewController.m */,
 				8E5BFF481BEBAA4000541669 /* BSFriendTrendsViewController.storyboard */,
-				8E5BFF451BEBA85F00541669 /* BSRecommentViewController.h */,
-				8E5BFF461BEBA85F00541669 /* BSRecommentViewController.m */,
 				8E5BFF4A1BEBB28D00541669 /* BSLoginRegisterViewController.h */,
 				8E5BFF4B1BEBB28D00541669 /* BSLoginRegisterViewController.m */,
+				8E5BFF451BEBA85F00541669 /* BSRecommentViewController.h */,
+				8E5BFF461BEBA85F00541669 /* BSRecommentViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -324,6 +339,10 @@
 		8EF6BC461BE5F02C0081E76E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8E33191D1BF0679600DE0A08 /* BSRecommendCategory.h */,
+				8E33191E1BF0679600DE0A08 /* BSRecommendCategory.m */,
+				8E3319201BF067A600DE0A08 /* BSRecommendUsers.h */,
+				8E3319211BF067A600DE0A08 /* BSRecommendUsers.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -335,6 +354,10 @@
 				8EA21ECE1BEC56F300C0D1CB /* BSQuickLoginButton.m */,
 				8EA21ED01BEC860700C0D1CB /* BSPlaceholderTextField.h */,
 				8EA21ED11BEC860700C0D1CB /* BSPlaceholderTextField.m */,
+				8E3319231BF067D000DE0A08 /* BSRecommendCategoryCell.h */,
+				8E3319241BF067D000DE0A08 /* BSRecommendCategoryCell.m */,
+				8E3319261BF067E300DE0A08 /* BSRecommendUsersCell.h */,
+				8E3319271BF067E300DE0A08 /* BSRecommendUsersCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -459,6 +482,8 @@
 				8EF6BC5B1BE5F02C0081E76E /* Category */,
 				8EFDA5AD1BE9FBE900D53ABB /* BSHTTPSessionManager.h */,
 				8EFDA5AE1BE9FBE900D53ABB /* BSHTTPSessionManager.m */,
+				8E3319291BF0820100DE0A08 /* BSExtensionConfig.h */,
+				8E33192A1BF0820100DE0A08 /* BSExtensionConfig.m */,
 				8EF6BC751BE5F6AC0081E76E /* BaiSiBuDeJie.pch */,
 				8EF6BC591BE5F02C0081E76E /* AppDelegate.h */,
 				8EF6BC5A1BE5F02C0081E76E /* AppDelegate.m */,
@@ -735,6 +760,7 @@
 			files = (
 				8E24C4E31BE7894B00AEE4A3 /* BSTabBar.m in Sources */,
 				8EF6BC661BE5F02C0081E76E /* BSTabBarController.m in Sources */,
+				8E3319281BF067E300DE0A08 /* BSRecommendUsersCell.m in Sources */,
 				8EF6BC6E1BE5F0870081E76E /* BSFriendTrendsViewController.m in Sources */,
 				8E431F3E1BEF3CF00018B812 /* NSString+BSFileSize.m in Sources */,
 				8EBA9B6D1BEDD07F0016819F /* BSMeCell.m in Sources */,
@@ -746,7 +772,10 @@
 				8EA21ECF1BEC56F300C0D1CB /* BSQuickLoginButton.m in Sources */,
 				8EA21ED21BEC860700C0D1CB /* BSPlaceholderTextField.m in Sources */,
 				8E5BFF471BEBA85F00541669 /* BSRecommentViewController.m in Sources */,
+				8E33192B1BF0820100DE0A08 /* BSExtensionConfig.m in Sources */,
+				8E33191F1BF0679600DE0A08 /* BSRecommendCategory.m in Sources */,
 				8E83EF491BE9A2730098413D /* BSEssenceViewController.m in Sources */,
+				8E3319251BF067D000DE0A08 /* BSRecommendCategoryCell.m in Sources */,
 				8E8270961BEA4DBE00031498 /* UIImage+BSCircle.m in Sources */,
 				8EBA9B701BEDD4390016819F /* BSFooterView.m in Sources */,
 				8E83EF521BE9ECD50098413D /* BSTagSubViewController.m in Sources */,
@@ -762,6 +791,7 @@
 				8EF6BC741BE5F0E90081E76E /* BSMeViewController.m in Sources */,
 				8E8270931BEA239C00031498 /* BSConst.m in Sources */,
 				8EAC13F51BE8DEE500AA0CF3 /* BSPublishViewController.m in Sources */,
+				8E3319221BF067A600DE0A08 /* BSRecommendUsers.m in Sources */,
 				8E431F381BEF179E0018B812 /* BSSettingViewController.m in Sources */,
 				8EF6BC671BE5F02C0081E76E /* AppDelegate.m in Sources */,
 				8E431F3B1BEF29940018B812 /* BSClearCachesCell.m in Sources */,

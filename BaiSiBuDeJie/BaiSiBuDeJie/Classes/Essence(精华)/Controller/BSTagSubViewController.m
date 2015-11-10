@@ -31,13 +31,6 @@ static NSString * const ID = @"tagCell";
     }
     return _manager;
 }
-/** tagSubArray的懒加载 */
-- (NSMutableArray *)tagSubArray{
-    if (!_tagSubArray) {
-        _tagSubArray = [NSMutableArray array];
-    }
-    return _tagSubArray;
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

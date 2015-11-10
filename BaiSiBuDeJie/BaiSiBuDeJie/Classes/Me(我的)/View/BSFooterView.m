@@ -31,14 +31,6 @@
     }
     return _manager;
 }
-/** squareArray的懒加载 */
-- (NSMutableArray *)squareArray{
-    if (!_squareArray) {
-        _squareArray = [NSMutableArray array];
-    }
-    return _squareArray;
-}
-
 
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {

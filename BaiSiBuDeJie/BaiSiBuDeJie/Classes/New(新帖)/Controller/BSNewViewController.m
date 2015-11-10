@@ -7,6 +7,7 @@
 //
 
 #import "BSNewViewController.h"
+#import "BSTagSubViewController.h"
 
 @interface BSNewViewController ()
 
@@ -30,7 +31,9 @@
 }
 
 - (void)mainTagSubIconClick{
-    BSLogFunc;
+    BSTagSubViewController *tagSub = [[BSTagSubViewController alloc] init];
+    
+    [self.navigationController pushViewController:tagSub animated:YES];
 }
 
 @end
