@@ -9,11 +9,18 @@
 #import "BSExtensionConfig.h"
 #import <MJExtension.h>
 #import "BSRecommendCategory.h"
+#import "BSTopic.h"
 
 @implementation BSExtensionConfig
 
 + (void)load{
     [BSRecommendCategory setupReplacedKeyFromPropertyName:^NSDictionary *{
+        return @{
+                 @"ID" : @"id",
+                 };
+    }];
+    
+    [BSTopic setupReplacedKeyFromPropertyName:^NSDictionary *{
         return @{
                  @"ID" : @"id",
                  };

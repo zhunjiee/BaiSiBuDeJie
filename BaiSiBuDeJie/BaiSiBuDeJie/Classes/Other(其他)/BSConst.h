@@ -11,3 +11,9 @@ UIKIT_EXTERN CGFloat const BSFirstCellTopY;
 
 /** 导航栏最大Y值 */
 UIKIT_EXTERN CGFloat const BSNavMaxY;
+
+/** TabBar高度 */
+UIKIT_EXTERN CGFloat const BSTabBarH;
+
+/** titleView的高度 */
+UIKIT_EXTERN CGFloat const BSTitleViewH;

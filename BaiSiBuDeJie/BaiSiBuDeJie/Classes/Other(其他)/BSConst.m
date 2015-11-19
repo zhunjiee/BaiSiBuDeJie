@@ -11,3 +11,9 @@ CGFloat const BSFirstCellTopY = 35;
 
 /** 导航栏最大Y值 */
 CGFloat const BSNavMaxY = 64;
+
+/** TabBar高度 */
+CGFloat const BSTabBarH = 49;
+
+/** titleView的高度 */
+CGFloat const BSTitleViewH = 40;
