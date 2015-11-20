@@ -7,6 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+@class BSComment;
+
+typedef enum {
+    /** 全部 */
+    BSTopicTypeAll = 1,
+    /** 图片 */
+    BSTopicTypePicture = 10,
+    /** 文字 */
+    BSTopicTypeWord = 29,
+    /** 声音 */
+    BSTopicTypeVoice = 31,
+    /** 视频 */
+    BSTopicTypeVideo = 41
+} BSTopicType;
 
 @interface BSTopic : NSObject
 /** 用户的名字 */
@@ -30,4 +44,29 @@
 /** 帖子ID */
 @property (nonatomic, copy) NSString *ID;
 
+/** 最热评论 */
+@property (nonatomic, strong) BSComment *top_cmt;
+
+/** 帖子类型 */
+@property (nonatomic, assign) BSTopicType type;
+
+/** 中间模型的frame */
+@property (nonatomic, assign) CGRect centerViewFrame;
+/** 帖子模型的高度 */
+@property (nonatomic, assign) CGFloat cellHeight;
+
+/** 图片宽度 */
+@property (nonatomic, assign) CGFloat width;
+/** 图片宽度 */
+@property (nonatomic, assign) CGFloat height;
+/** 是否为大图 */
+@property (nonatomic, assign, getter=isBigImage) BOOL bigImage;
+/** 是否为gif图片 */
+@property (nonatomic, assign) BOOL is_gif;
+/** 小图 */
+@property (nonatomic, copy) NSString *smallImage;
+/** 中图 */
+@property (nonatomic, copy) NSString *middleImage;
+/** 大图 */
+@property (nonatomic, copy) NSString *largeImage;
 @end

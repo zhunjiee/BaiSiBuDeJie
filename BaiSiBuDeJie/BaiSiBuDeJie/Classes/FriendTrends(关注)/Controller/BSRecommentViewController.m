@@ -79,7 +79,7 @@ static NSString * const BSUsersID = @"usersCell";
                              };
     BSWeakSelf;
     [self.manager GET:BSBaseURL parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
-        BSWriteToFile(responseObject, @"123");
+//        BSWriteToFile(responseObject, @"123");
         
         if (responseObject == nil) {
             [SVProgressHUD showErrorWithStatus:@"哎呀,出错啦~"];

@@ -8,6 +8,9 @@
 
 #import "BSTopicCell.h"
 #import "BSTopic.h"
+#import "BSComment.h"
+#import "BSUser.h"
+#import "BSTopicPictureView.h"
 
 @interface BSTopicCell()
 @property (weak, nonatomic) IBOutlet UIImageView *profile_imageView;
@@ -26,18 +29,27 @@
 
 /** 用户名 */
 @property (nonatomic, copy) NSString *username;
+
+// 中间的控件
+/** 图片控件 */
+@property (nonatomic, weak) BSTopicPictureView *pictureView;
 @end
 
 @implementation BSTopicCell
-
-- (void)awakeFromNib {
-    self.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mainCellBackground"]];
+#pragma mark 懒加载
+/** pictureView的懒加载 */
+- (BSTopicPictureView *)pictureView{
+    if (!_pictureView) {
+        BSTopicPictureView *pictureView = [BSTopicPictureView pictureView];
+        [self.contentView addSubview:pictureView];
+        _pictureView = pictureView;
+    }
+    return _pictureView;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+#pragma mark - 初始化设置
+- (void)awakeFromNib {
+    self.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mainCellBackground"]];
 }
 
 // 点击更多按钮
@@ -54,6 +66,9 @@
     [self.window.rootViewController presentViewController:alert animated:YES completion:nil];
 }
 
+/**
+ *  设置帖子模型数据
+ */
 - (void)setTopic:(BSTopic *)topic{
     _topic = topic;
     [self.profile_imageView setHeaderImage:[NSURL URLWithString:topic.profile_image]];
@@ -65,6 +80,33 @@
     [self setUpButton:self.caiButton withCount:topic.cai title:@"踩"];
     [self setUpButton:self.repostButton withCount:topic.repost title:@"分享"];
     [self setUpButton:self.commentButton withCount:topic.comment title:@"评论"];
+    
+    // 设置最热评论
+    if (topic.top_cmt) {
+        self.top_cmtView.hidden = NO;
+        
+        // 设置最热评论的内容
+        NSString *content = topic.top_cmt.content;
+        NSString *username = topic.top_cmt.user.username;
+        self.top_cmtLabel.text = [NSString stringWithFormat:@"%@ : %@", username, content];
+        
+    }else {
+        self.top_cmtView.hidden = YES;
+    }
+    
+    // 设置中间具体内容
+    if (topic.type == BSTopicTypePicture) { // 图片
+        self.pictureView.hidden = NO;
+        
+        self.pictureView.frame = topic.centerViewFrame;
+        self.pictureView.topic = topic;
+    }else if (topic.type == BSTopicTypeVideo) { // 视频
+        self.pictureView.hidden = YES;
+    }else if (topic.type == BSTopicTypeVoice) { // 音频
+        self.pictureView.hidden = YES;
+    }else{ // 文字
+        self.pictureView.hidden = YES;
+    }
 }
 
 /**

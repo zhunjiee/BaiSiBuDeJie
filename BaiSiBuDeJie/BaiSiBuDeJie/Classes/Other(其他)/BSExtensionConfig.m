@@ -23,6 +23,10 @@
     [BSTopic setupReplacedKeyFromPropertyName:^NSDictionary *{
         return @{
                  @"ID" : @"id",
+                 @"top_cmt" : @"top_cmt[0]",
+                 @"smallImage" : @"image0",
+                 @"largeImage" : @"image1",
+                 @"middleImage" : @"image2",
                  };
     }];
 }

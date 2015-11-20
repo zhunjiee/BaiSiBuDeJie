@@ -101,7 +101,7 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     
     scrollView.delegate = self;
-    
+    scrollView.bounces = NO;
     scrollView.contentSize = CGSizeMake(self.view.width * self.childViewControllers.count, 0);
     
     scrollView.pagingEnabled = YES;

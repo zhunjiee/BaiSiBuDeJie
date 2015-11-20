@@ -7,6 +7,8 @@
 //
 
 #import "BSTopic.h"
+#import "BSComment.h"
+#import "BSUser.h"
 
 @implementation BSTopic
 
@@ -91,5 +93,73 @@
     }
 }
 
+/**
+ *  设置帖子中间内容的frame,可以在cellHeight中设置
+ */
+//- (CGRect)centerViewFrame{
+//    // 避免重复计算
+//    if (_centerViewFrame.size.height) {
+//        return _centerViewFrame;
+//    }
+//    
+//    CGFloat centerViewX = BSMargin;
+//    CGFloat centerViewW = [UIScreen mainScreen].bounds.size.width - 2 * BSMargin;
+//    CGFloat centerViewH = centerViewW / self.width * self.height;
+//    CGFloat textY = 55;
+//    CGFloat textH = [self.text boundingRectWithSize:CGSizeMake(centerViewW, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:17]} context:nil].size.height;
+//    CGFloat centerViewY = textH + textY;
+//    
+//    if (centerViewH >= [UIScreen mainScreen].bounds.size.height) {
+//        centerViewH = 200;
+//        self.bigImage = YES;
+//    }
+//    
+//    return CGRectMake(centerViewX, centerViewY, centerViewW, centerViewH);
+//}
 
+/**
+ *  设置帖子模型的高度和centerViewFrame
+ */
+- (CGFloat)cellHeight{
+    // 避免重复计算
+    if (_cellHeight) {
+        return _cellHeight;
+    }
+    
+    CGFloat textY = 55;
+    CGFloat textMaxW = [UIScreen mainScreen].bounds.size.width - 2 * BSMargin;
+    CGFloat textH = [self.text boundingRectWithSize:CGSizeMake(textMaxW, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:17]} context:nil].size.height;
+    _cellHeight = textY + textH;
+    
+    // 有中间的内容
+    if (self.type != BSTopicTypeWord) {
+        CGFloat centerViewX = BSMargin;
+        CGFloat centerViewW = [UIScreen mainScreen].bounds.size.width - 2 * BSMargin;
+        CGFloat centerViewH = centerViewW / self.width * self.height;
+        CGFloat centerViewY = textH + textY;
+        
+        if (centerViewH >= [UIScreen mainScreen].bounds.size.height) {
+            centerViewH = 200;
+            self.bigImage = YES;
+        }
+        
+        _centerViewFrame = CGRectMake(centerViewX, centerViewY, centerViewW, centerViewH);
+        
+        _cellHeight += centerViewH + BSMargin;
+    }
+    
+    // 有最热评论
+    if (self.top_cmt) {
+        CGFloat topCmtMaxY = 24;
+        NSString *topCmtText = [NSString stringWithFormat:@"%@ : %@", self.top_cmt.user.username, self.top_cmt.content];
+        CGFloat topCmtTextH = [topCmtText boundingRectWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width - 2 * BSMargin - 6, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:13]} context:nil].size.height;
+        _cellHeight += topCmtMaxY + topCmtTextH + BSMargin;
+    }
+    
+    CGFloat toolBarH = 40;
+    
+    _cellHeight += toolBarH + BSMargin;
+    
+    return _cellHeight;
+}
 @end
