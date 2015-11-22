@@ -24,7 +24,7 @@
                     <animations/>
                     <color key="backgroundColor" red="0.83137254900000002" green="0.83137254900000002" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                 </imageView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4fw-Ed-xQL" userLabel="进度条">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4fw-Ed-xQL" userLabel="进度条" customClass="DALabeledCircularProgressView">
                     <rect key="frame" x="131" y="66.5" width="80" height="80"/>
                     <animations/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -60,6 +60,9 @@
                             <exclude reference="UW8-ic-7lR"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <action selector="seeBigImageButtonClick" destination="LNe-RG-kAS" eventType="touchUpInside" id="cMr-oG-nHV"/>
+                    </connections>
                 </button>
             </subviews>
             <animations/>
@@ -92,6 +95,7 @@
                 <outlet property="imageView" destination="x13-p8-xAI" id="II8-ed-PwR"/>
                 <outlet property="placeholderView" destination="YC1-F1-yWk" id="IXT-nE-JO6"/>
                 <outlet property="progressView" destination="4fw-Ed-xQL" id="NQ3-Cc-PRs"/>
+                <outlet property="seeBigImageButton" destination="1az-Di-WhU" id="qmp-9v-gd4"/>
             </connections>
             <point key="canvasLocation" x="-92.5" y="99.5"/>
         </view>

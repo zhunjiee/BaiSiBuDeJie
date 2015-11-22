@@ -51,6 +51,8 @@
 		8EBA9B701BEDD4390016819F /* BSFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBA9B6F1BEDD4390016819F /* BSFooterView.m */; };
 		8EBA9B731BEDDB020016819F /* BSSquareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBA9B721BEDDB020016819F /* BSSquareButton.m */; };
 		8EBA9B761BEDDE430016819F /* BSSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBA9B751BEDDE430016819F /* BSSquare.m */; };
+		8EED47791C018228001D54B4 /* BSBigImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EED47771C018228001D54B4 /* BSBigImageViewController.m */; };
+		8EED477A1C018228001D54B4 /* BSBigImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EED47781C018228001D54B4 /* BSBigImageViewController.xib */; };
 		8EF6BC131BE5E58B0081E76E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EF6BC121BE5E58B0081E76E /* Assets.xcassets */; };
 		8EF6BC211BE5E58B0081E76E /* BaiSiBuDeJieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF6BC201BE5E58B0081E76E /* BaiSiBuDeJieTests.m */; };
 		8EF6BC2C1BE5E58B0081E76E /* BaiSiBuDeJieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF6BC2B1BE5E58B0081E76E /* BaiSiBuDeJieUITests.m */; };
@@ -168,6 +170,9 @@
 		8EBA9B721BEDDB020016819F /* BSSquareButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSSquareButton.m; sourceTree = "<group>"; };
 		8EBA9B741BEDDE430016819F /* BSSquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSSquare.h; sourceTree = "<group>"; };
 		8EBA9B751BEDDE430016819F /* BSSquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSSquare.m; sourceTree = "<group>"; };
+		8EED47761C018228001D54B4 /* BSBigImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSBigImageViewController.h; sourceTree = "<group>"; };
+		8EED47771C018228001D54B4 /* BSBigImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSBigImageViewController.m; sourceTree = "<group>"; };
+		8EED47781C018228001D54B4 /* BSBigImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSBigImageViewController.xib; sourceTree = "<group>"; };
 		8EF6BC031BE5E58B0081E76E /* BaiSiBuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiSiBuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EF6BC121BE5E58B0081E76E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8EF6BC171BE5E58B0081E76E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -360,6 +365,9 @@
 				8E83EF481BE9A2730098413D /* BSEssenceViewController.m */,
 				8E83EF501BE9ECD50098413D /* BSTagSubViewController.h */,
 				8E83EF511BE9ECD50098413D /* BSTagSubViewController.m */,
+				8EED47761C018228001D54B4 /* BSBigImageViewController.h */,
+				8EED47771C018228001D54B4 /* BSBigImageViewController.m */,
+				8EED47781C018228001D54B4 /* BSBigImageViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -784,6 +792,7 @@
 				8E83EF571BE9F6D70098413D /* BSTagSubCell.xib in Resources */,
 				8E5BFF491BEBAA4000541669 /* BSFriendTrendsViewController.storyboard in Resources */,
 				8EB293331BEDFF9600E6E15C /* BSWebViewController.xib in Resources */,
+				8EED477A1C018228001D54B4 /* BSBigImageViewController.xib in Resources */,
 				8EAC13F61BE8DEE500AA0CF3 /* BSPublishViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -848,6 +857,7 @@
 				8E66BCB41BF19E15004BF3B5 /* BSVoiceViewController.m in Sources */,
 				8EFF50831BF72121006DBBAE /* BSTopic.m in Sources */,
 				8EF6BC6E1BE5F0870081E76E /* BSFriendTrendsViewController.m in Sources */,
+				8EED47791C018228001D54B4 /* BSBigImageViewController.m in Sources */,
 				8E431F3E1BEF3CF00018B812 /* NSString+BSFileSize.m in Sources */,
 				8EAE2DD91BFEF4A500D3376F /* BSUser.m in Sources */,
 				8E66BCB11BF19E08004BF3B5 /* BSVideoViewController.m in Sources */,

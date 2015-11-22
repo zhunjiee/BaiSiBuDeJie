@@ -89,15 +89,15 @@ static NSString * const BSCellID = @"topic";
         weakSelf.topicArray = [BSTopic objectArrayWithKeyValuesArray:responseObject[@"list"]];
         
 #warning 获取哪些帖子有最热评论
-        NSArray *dictArray = responseObject[@"list"];
-        int i = 0;
-        for (NSMutableDictionary *dict in dictArray) {
-            NSArray *top_cmt = dict[@"top_cmt"];
-            if (top_cmt.count) {
-                BSLog(@"第%zd个帖子有最热评论", i);
-            }
-            i++;
-        }
+//        NSArray *dictArray = responseObject[@"list"];
+//        int i = 0;
+//        for (NSMutableDictionary *dict in dictArray) {
+//            NSArray *top_cmt = dict[@"top_cmt"];
+//            if (top_cmt.count) {
+//                BSLog(@"第%zd个帖子有最热评论", i);
+//            }
+//            i++;
+//        }
         
         
         weakSelf.maxtime = responseObject[@"info"][@"maxtime"];
@@ -124,15 +124,15 @@ static NSString * const BSCellID = @"topic";
         [weakSelf.topicArray addObjectsFromArray:[BSTopic objectArrayWithKeyValuesArray:responseObject[@"list"]]];
         
 #warning 获取哪些帖子有最热评论
-        NSArray *dictArray = responseObject[@"list"];
-        int i = 0;
-        for (NSMutableDictionary *dict in dictArray) {
-            NSArray *top_cmt = dict[@"top_cmt"];
-            if (top_cmt.count) {
-                BSLog(@"第%zd个帖子有最热评论", i);
-            }
-            i++;
-        }
+//        NSArray *dictArray = responseObject[@"list"];
+//        int i = 0;
+//        for (NSMutableDictionary *dict in dictArray) {
+//            NSArray *top_cmt = dict[@"top_cmt"];
+//            if (top_cmt.count) {
+//                BSLog(@"第%zd个帖子有最热评论", i);
+//            }
+//            i++;
+//        }
         
         weakSelf.maxtime = responseObject[@"info"][@"maxtime"];
         
