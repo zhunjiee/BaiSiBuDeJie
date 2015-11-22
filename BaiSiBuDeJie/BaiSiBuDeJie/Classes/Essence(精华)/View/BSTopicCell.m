@@ -11,6 +11,7 @@
 #import "BSComment.h"
 #import "BSUser.h"
 #import "BSTopicPictureView.h"
+#import "BSTopicVoiceView.h"
 
 @interface BSTopicCell()
 @property (weak, nonatomic) IBOutlet UIImageView *profile_imageView;
@@ -33,6 +34,8 @@
 // 中间的控件
 /** 图片控件 */
 @property (nonatomic, weak) BSTopicPictureView *pictureView;
+/** 声音控件 */
+@property (nonatomic, weak) BSTopicVoiceView *voiceView;
 @end
 
 @implementation BSTopicCell
@@ -45,6 +48,14 @@
         _pictureView = pictureView;
     }
     return _pictureView;
+}
+/** voiceView的懒加载 */
+- (BSTopicVoiceView *)voiceView{
+    if (!_voiceView) {
+        BSTopicVoiceView *voiceView = [BSTopicVoiceView voiceView];
+        _voiceView = voiceView;
+    }
+    return _voiceView;
 }
 
 #pragma mark - 初始化设置
@@ -100,12 +111,18 @@
         
         self.pictureView.frame = topic.centerViewFrame;
         self.pictureView.topic = topic;
+        
+        self.voiceView.hidden = YES;
     }else if (topic.type == BSTopicTypeVideo) { // 视频
         self.pictureView.hidden = YES;
+        self.voiceView.hidden = YES;
     }else if (topic.type == BSTopicTypeVoice) { // 音频
+        self.voiceView.hidden = NO;
+        
         self.pictureView.hidden = YES;
     }else{ // 文字
         self.pictureView.hidden = YES;
+        self.voiceView.hidden = YES;
     }
 }
 

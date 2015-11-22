@@ -53,6 +53,10 @@
 		8EBA9B761BEDDE430016819F /* BSSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBA9B751BEDDE430016819F /* BSSquare.m */; };
 		8EED47791C018228001D54B4 /* BSBigImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EED47771C018228001D54B4 /* BSBigImageViewController.m */; };
 		8EED477A1C018228001D54B4 /* BSBigImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EED47781C018228001D54B4 /* BSBigImageViewController.xib */; };
+		8EED47BC1C01BA70001D54B4 /* BSTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EED47BB1C01BA70001D54B4 /* BSTopicVoiceView.m */; };
+		8EED47BE1C01BA7F001D54B4 /* BSTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EED47BD1C01BA7F001D54B4 /* BSTopicVoiceView.xib */; };
+		8EED47C11C01BA90001D54B4 /* BSTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EED47C01C01BA90001D54B4 /* BSTopicVideoView.m */; };
+		8EED47C31C01BAA0001D54B4 /* BSTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EED47C21C01BAA0001D54B4 /* BSTopicVideoView.xib */; };
 		8EF6BC131BE5E58B0081E76E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EF6BC121BE5E58B0081E76E /* Assets.xcassets */; };
 		8EF6BC211BE5E58B0081E76E /* BaiSiBuDeJieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF6BC201BE5E58B0081E76E /* BaiSiBuDeJieTests.m */; };
 		8EF6BC2C1BE5E58B0081E76E /* BaiSiBuDeJieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF6BC2B1BE5E58B0081E76E /* BaiSiBuDeJieUITests.m */; };
@@ -173,6 +177,12 @@
 		8EED47761C018228001D54B4 /* BSBigImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSBigImageViewController.h; sourceTree = "<group>"; };
 		8EED47771C018228001D54B4 /* BSBigImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSBigImageViewController.m; sourceTree = "<group>"; };
 		8EED47781C018228001D54B4 /* BSBigImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSBigImageViewController.xib; sourceTree = "<group>"; };
+		8EED47BA1C01BA70001D54B4 /* BSTopicVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTopicVoiceView.h; sourceTree = "<group>"; };
+		8EED47BB1C01BA70001D54B4 /* BSTopicVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTopicVoiceView.m; sourceTree = "<group>"; };
+		8EED47BD1C01BA7F001D54B4 /* BSTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSTopicVoiceView.xib; sourceTree = "<group>"; };
+		8EED47BF1C01BA90001D54B4 /* BSTopicVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTopicVideoView.h; sourceTree = "<group>"; };
+		8EED47C01C01BA90001D54B4 /* BSTopicVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTopicVideoView.m; sourceTree = "<group>"; };
+		8EED47C21C01BAA0001D54B4 /* BSTopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSTopicVideoView.xib; sourceTree = "<group>"; };
 		8EF6BC031BE5E58B0081E76E /* BaiSiBuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiSiBuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EF6BC121BE5E58B0081E76E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8EF6BC171BE5E58B0081E76E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -270,6 +280,12 @@
 				8EAE2DDA1BFF194800D3376F /* BSTopicPictureView.h */,
 				8EAE2DDB1BFF194800D3376F /* BSTopicPictureView.m */,
 				8EAE2DDD1BFF195F00D3376F /* BSTopicPictureView.xib */,
+				8EED47BA1C01BA70001D54B4 /* BSTopicVoiceView.h */,
+				8EED47BB1C01BA70001D54B4 /* BSTopicVoiceView.m */,
+				8EED47BD1C01BA7F001D54B4 /* BSTopicVoiceView.xib */,
+				8EED47BF1C01BA90001D54B4 /* BSTopicVideoView.h */,
+				8EED47C01C01BA90001D54B4 /* BSTopicVideoView.m */,
+				8EED47C21C01BAA0001D54B4 /* BSTopicVideoView.xib */,
 			);
 			name = Topic;
 			sourceTree = "<group>";
@@ -791,6 +807,8 @@
 				8EF6BC131BE5E58B0081E76E /* Assets.xcassets in Resources */,
 				8E83EF571BE9F6D70098413D /* BSTagSubCell.xib in Resources */,
 				8E5BFF491BEBAA4000541669 /* BSFriendTrendsViewController.storyboard in Resources */,
+				8EED47C31C01BAA0001D54B4 /* BSTopicVideoView.xib in Resources */,
+				8EED47BE1C01BA7F001D54B4 /* BSTopicVoiceView.xib in Resources */,
 				8EB293331BEDFF9600E6E15C /* BSWebViewController.xib in Resources */,
 				8EED477A1C018228001D54B4 /* BSBigImageViewController.xib in Resources */,
 				8EAC13F61BE8DEE500AA0CF3 /* BSPublishViewController.xib in Resources */,
@@ -867,6 +885,7 @@
 				8EFF50871BF727EF006DBBAE /* BSTopicCell.m in Sources */,
 				8E83EF5A1BE9F9260098413D /* BSTagSub.m in Sources */,
 				8EF6BC711BE5F0DD0081E76E /* BSNewViewController.m in Sources */,
+				8EED47BC1C01BA70001D54B4 /* BSTopicVoiceView.m in Sources */,
 				8E66BCAB1BF19DCC004BF3B5 /* BSAllViewController.m in Sources */,
 				8EFDA5AF1BE9FBE900D53ABB /* BSHTTPSessionManager.m in Sources */,
 				8E83EF461BE98FC00098413D /* UIView+BSExtension.m in Sources */,
@@ -893,6 +912,7 @@
 				8EB2932F1BEDF9A000E6E15C /* BSWebViewController.m in Sources */,
 				8EF6BC681BE5F02C0081E76E /* main.m in Sources */,
 				8EBA9B761BEDDE430016819F /* BSSquare.m in Sources */,
+				8EED47C11C01BA90001D54B4 /* BSTopicVideoView.m in Sources */,
 				8EF6BC741BE5F0E90081E76E /* BSMeViewController.m in Sources */,
 				8E8270931BEA239C00031498 /* BSConst.m in Sources */,
 				8EAC13F51BE8DEE500AA0CF3 /* BSPublishViewController.m in Sources */,

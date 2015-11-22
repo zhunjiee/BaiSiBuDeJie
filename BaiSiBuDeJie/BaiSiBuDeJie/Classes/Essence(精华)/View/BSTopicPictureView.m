@@ -10,8 +10,8 @@
 #import "BSTopic.h"
 #import <UIImageView+WebCache.h>
 #import <DALabeledCircularProgressView.h>
-#import <AFNetworking.h>
 #import "BSBigImageViewController.h"
+#import <AFNetworking.h>
 
 @interface BSTopicPictureView ()
 @property (weak, nonatomic) IBOutlet UIImageView *gifView;
@@ -19,15 +19,13 @@
 @property (weak, nonatomic) IBOutlet UIImageView *placeholderView;
 @property (weak, nonatomic) IBOutlet DALabeledCircularProgressView *progressView;
 @property (weak, nonatomic) IBOutlet UIButton *seeBigImageButton;
+
 /** 网络监听管理者 */
 @property (nonatomic, weak) AFNetworkReachabilityManager *manager;
 
 @end
 
 @implementation BSTopicPictureView
-
-static NSString *image = nil;
-
 /** manager的懒加载 */
 - (AFNetworkReachabilityManager *)manager{
     if (!_manager) {
@@ -37,6 +35,9 @@ static NSString *image = nil;
     return _manager;
 }
 
+/**
+ *  通过xib加载图片控件
+ */
 + (instancetype)pictureView{
     return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil].firstObject;
 }
@@ -44,35 +45,45 @@ static NSString *image = nil;
 - (void)awakeFromNib{
     [super awakeFromNib];
     
+    // 去除默认的autoresizingMask设置
+    self.autoresizingMask = UIViewAutoresizingNone;
+    
     // 进度条相关初始化设置
     self.progressView.roundedCorners = 5; // 设置进度条头的弧度
     self.progressView.progressLabel.textColor = [UIColor whiteColor];
-    
-    
+
     // 点击图片查看大图
-    self.imageView.userInteractionEnabled = YES;
+    _imageView.userInteractionEnabled = YES;
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(seeBigImage)];
-    [self.imageView addGestureRecognizer:tap];
+    [_imageView addGestureRecognizer:tap];
 }
 
 - (void)seeBigImage{
-    BSBigImageViewController *bigImage = [[BSBigImageViewController alloc] init];
+    // 图片正在加载时点击无效
+    if (_imageView.image == nil) {
+        return;
+    }
     
+    BSBigImageViewController *bigImage = [[BSBigImageViewController alloc] init];
     // 写在后面会报NaN(Not a Number)的错误，因为先modal过去，topic还是0
     bigImage.topic = self.topic;
-    
     [self.window.rootViewController presentViewController:bigImage animated:YES completion:nil];
 }
-
 
 - (IBAction)seeBigImageButtonClick {
     [self seeBigImage];
 }
 
+
+/**
+ * 设置帖子中图片的内容
+ */
 - (void)setTopic:(BSTopic *)topic{
     _topic = topic;
 
-    // 利用AFNetworking根据网络环境下载图片
+    static NSString *image = nil;
+    
+#warning 利用AFNetworking根据网络环境下载图片
     [self.manager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
         switch (status) {
             case 0:
@@ -88,7 +99,6 @@ static NSString *image = nil;
                 NSLog(@"未知");
                 break;
         }
-        
     }];
     
     [self.manager startMonitoring];
@@ -108,15 +118,15 @@ static NSString *image = nil;
     self.seeBigImageButton.hidden = !topic.isBigImage;
     // 大图只显示顶部
     if (topic.isBigImage) {
-        self.imageView.contentMode = UIViewContentModeTop;
+        _imageView.contentMode = UIViewContentModeTop;
         // 检调多余部分
-        self.imageView.clipsToBounds = YES;
+        _imageView.clipsToBounds = YES;
     }else{
-        self.imageView.contentMode = UIViewContentModeScaleToFill;
-        self.imageView.clipsToBounds = NO;
+        _imageView.contentMode = UIViewContentModeScaleToFill;
+        _imageView.clipsToBounds = NO;
     }
     
-    [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.largeImage] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+    [_imageView sd_setImageWithURL:[NSURL URLWithString:topic.largeImage] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         self.progressView.hidden = NO;
         self.placeholderView.hidden = NO;
         
@@ -133,7 +143,5 @@ static NSString *image = nil;
     }];
     
 }
-
-#pragma mark - 监听方法
 
 @end

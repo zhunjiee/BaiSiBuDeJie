@@ -1,18 +1,17 @@
 //
-//  BSTopicPictureView.h
+//  BSTopicVoiceView.h
 //  BaiSiBuDeJie
 //
-//  Created by 侯宝伟 on 15/11/20.
+//  Created by 侯宝伟 on 15/11/22.
 //  Copyright © 2015年 ZHUNJIEE. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 @class BSTopic;
 
-@interface BSTopicPictureView : UIView
+@interface BSTopicVoiceView : UIView
 /** 帖子模型 */
 @property (nonatomic, strong) BSTopic *topic;
 
-+ (instancetype)pictureView;
-
++ (instancetype)voiceView;
 @end
