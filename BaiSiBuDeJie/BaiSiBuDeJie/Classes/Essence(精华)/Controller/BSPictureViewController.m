@@ -10,4 +10,7 @@
 
 @implementation BSPictureViewController
 
+- (BSTopicType)type{
+    return BSTopicTypePicture;
+}
 @end

@@ -10,4 +10,7 @@
 
 @implementation BSWordViewController
 
+- (BSTopicType)type{
+    return BSTopicTypeWord;
+}
 @end

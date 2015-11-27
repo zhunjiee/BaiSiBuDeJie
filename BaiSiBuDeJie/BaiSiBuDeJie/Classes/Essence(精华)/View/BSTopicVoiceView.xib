@@ -26,7 +26,7 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0P-vA-0Wb" userLabel="时长">
                     <rect key="frame" x="300" y="200" width="37.5" height="18"/>
                     <animations/>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.20746073300000001" green="0.20746073300000001" blue="0.20746073300000001" alpha="0.80000554079999997" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
@@ -34,7 +34,7 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwP-fE-8Ja" userLabel="播放次数">
                     <rect key="frame" x="300" y="0.0" width="37.5" height="18"/>
                     <animations/>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.20746073300000001" green="0.20746073300000001" blue="0.20746073300000001" alpha="0.80000554079999997" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
@@ -47,7 +47,11 @@
                         <constraint firstAttribute="height" constant="63" id="RL8-77-cAR"/>
                     </constraints>
                     <state key="normal" image="playButtonPlay" backgroundImage="playButton"/>
+                    <state key="selected" image="playButtonPause" backgroundImage="playButtonClick"/>
                     <state key="highlighted" image="playButtonPause" backgroundImage="playButtonClick"/>
+                    <connections>
+                        <action selector="playButtonClick:" destination="mr6-ei-uVi" eventType="touchUpInside" id="AO5-Of-cw3"/>
+                    </connections>
                 </button>
             </subviews>
             <animations/>

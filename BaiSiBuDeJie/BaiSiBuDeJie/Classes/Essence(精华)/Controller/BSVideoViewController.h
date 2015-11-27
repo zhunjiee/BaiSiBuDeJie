@@ -6,8 +6,8 @@
 //  Copyright © 2015年 ZHUNJIEE. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BSTopicViewController.h"
 
-@interface BSVideoViewController : UITableViewController
+@interface BSVideoViewController : BSTopicViewController
 
 @end

@@ -53,14 +53,14 @@
     self.progressView.progressLabel.textColor = [UIColor whiteColor];
 
     // 点击图片查看大图
-    _imageView.userInteractionEnabled = YES;
+    self.imageView.userInteractionEnabled = YES;
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(seeBigImage)];
-    [_imageView addGestureRecognizer:tap];
+    [self.imageView addGestureRecognizer:tap];
 }
 
 - (void)seeBigImage{
     // 图片正在加载时点击无效
-    if (_imageView.image == nil) {
+    if (self.imageView.image == nil) {
         return;
     }
     
@@ -118,15 +118,15 @@
     self.seeBigImageButton.hidden = !topic.isBigImage;
     // 大图只显示顶部
     if (topic.isBigImage) {
-        _imageView.contentMode = UIViewContentModeTop;
+        self.imageView.contentMode = UIViewContentModeTop;
         // 检调多余部分
-        _imageView.clipsToBounds = YES;
+        self.imageView.clipsToBounds = YES;
     }else{
-        _imageView.contentMode = UIViewContentModeScaleToFill;
-        _imageView.clipsToBounds = NO;
+        self.imageView.contentMode = UIViewContentModeScaleToFill;
+        self.imageView.clipsToBounds = NO;
     }
     
-    [_imageView sd_setImageWithURL:[NSURL URLWithString:topic.largeImage] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+    [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.largeImage] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         self.progressView.hidden = NO;
         self.placeholderView.hidden = NO;
         

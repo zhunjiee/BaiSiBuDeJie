@@ -32,7 +32,7 @@
                     </constraints>
                     <state key="normal" image="video-play"/>
                     <connections>
-                        <action selector="playVideoClick" destination="vPD-YK-5Zc" eventType="touchUpInside" id="5eZ-68-f1C"/>
+                        <action selector="playButtonClick" destination="vPD-YK-5Zc" eventType="touchUpInside" id="mZZ-Jx-fHr"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDj-7b-eNF" userLabel="播放次数">
@@ -70,9 +70,11 @@
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="placeholderView" destination="DgG-jA-gWD" id="BXx-cL-Sgl"/>
-                <outlet property="playCountLabel" destination="EDj-7b-eNF" id="QyC-ni-RCz"/>
-                <outlet property="timeLabel" destination="r72-qD-Qv9" id="QrK-jp-Q2a"/>
+                <outlet property="imageView" destination="PtS-xH-AHe" id="Ytt-lH-NL3"/>
+                <outlet property="placeholderView" destination="DgG-jA-gWD" id="uJO-ej-1uv"/>
+                <outlet property="playButton" destination="5j2-DX-7MQ" id="BbO-tO-lCq"/>
+                <outlet property="playCountLabel" destination="EDj-7b-eNF" id="o9m-CG-BJT"/>
+                <outlet property="timeLabel" destination="r72-qD-Qv9" id="mtl-Ze-Gen"/>
             </connections>
             <point key="canvasLocation" x="-44" y="120"/>
         </view>

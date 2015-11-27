@@ -10,4 +10,7 @@
 
 @implementation BSVideoViewController
 
+- (BSTopicType)type{
+    return BSTopicTypeVideo;
+}
 @end

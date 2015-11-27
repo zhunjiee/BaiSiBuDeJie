@@ -10,4 +10,7 @@
 
 @implementation BSVoiceViewController
 
+- (BSTopicType)type{
+    return BSTopicTypeVoice;
+}
 @end

@@ -70,15 +70,18 @@ typedef enum {
 /** 大图 */
 @property (nonatomic, copy) NSString *largeImage;
 
+/** 声音路径 */
+@property (nonatomic, copy) NSString *voiceuri;
 /** 声音长度 */
 @property (nonatomic, assign) NSInteger voicetime;
 /** 音频播放次数 */
 @property (nonatomic, assign) NSInteger playfcount;
 
+/** 视频路径 */
+@property (nonatomic, copy) NSString *videouri;
 /** 视频长度 */
 @property (nonatomic, assign) NSInteger videotime;
 /** 视频播放次数 */
 @property (nonatomic, assign) NSInteger playcount;
-/** 视频长度 */
-@property (nonatomic, assign) NSInteger videoTime;
+
 @end

@@ -12,6 +12,7 @@
 #import "BSUser.h"
 #import "BSTopicPictureView.h"
 #import "BSTopicVoiceView.h"
+#import "BSTopicVideoView.h"
 
 @interface BSTopicCell()
 @property (weak, nonatomic) IBOutlet UIImageView *profile_imageView;
@@ -36,6 +37,8 @@
 @property (nonatomic, weak) BSTopicPictureView *pictureView;
 /** 声音控件 */
 @property (nonatomic, weak) BSTopicVoiceView *voiceView;
+/** 视频空间 */
+@property (nonatomic, weak) BSTopicVideoView *videoView;
 @end
 
 @implementation BSTopicCell
@@ -53,9 +56,19 @@
 - (BSTopicVoiceView *)voiceView{
     if (!_voiceView) {
         BSTopicVoiceView *voiceView = [BSTopicVoiceView voiceView];
+        [self.contentView addSubview:voiceView];
         _voiceView = voiceView;
     }
     return _voiceView;
+}
+/** videoView的懒加载 */
+- (BSTopicVideoView *)videoView{
+    if (!_videoView) {
+        BSTopicVideoView *videoView = [BSTopicVideoView videoView];
+        [self.contentView addSubview:videoView];
+        _videoView = videoView;
+    }
+    return _videoView;
 }
 
 #pragma mark - 初始化设置
@@ -108,21 +121,29 @@
     // 设置中间具体内容
     if (topic.type == BSTopicTypePicture) { // 图片
         self.pictureView.hidden = NO;
-        
         self.pictureView.frame = topic.centerViewFrame;
         self.pictureView.topic = topic;
         
         self.voiceView.hidden = YES;
+        self.videoView.hidden = YES;
     }else if (topic.type == BSTopicTypeVideo) { // 视频
+        self.videoView.hidden = NO;
+        self.videoView.frame = topic.centerViewFrame;
+        self.videoView.topic = topic;
+        
         self.pictureView.hidden = YES;
         self.voiceView.hidden = YES;
     }else if (topic.type == BSTopicTypeVoice) { // 音频
         self.voiceView.hidden = NO;
+        self.voiceView.frame = topic.centerViewFrame;
+        self.voiceView.topic = topic;
         
         self.pictureView.hidden = YES;
+        self.videoView.hidden = YES;
     }else{ // 文字
         self.pictureView.hidden = YES;
         self.voiceView.hidden = YES;
+        self.videoView.hidden = YES;
     }
 }
 
