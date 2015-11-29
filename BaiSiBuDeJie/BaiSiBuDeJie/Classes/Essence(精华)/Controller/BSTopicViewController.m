@@ -104,7 +104,7 @@ static NSString * const BSCellID = @"topic";
                              };
     BSWeakSelf;
     [self.manager GET:BSBaseURL parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
-        BSWriteToFile(responseObject, @"123");
+//        BSWriteToFile(responseObject, @"123");
         
         weakSelf.topicArray = [BSTopic objectArrayWithKeyValuesArray:responseObject[@"list"]];
         
@@ -190,6 +190,9 @@ static NSString * const BSCellID = @"topic";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     BSCommentViewController *comment = [[BSCommentViewController alloc] init];
+    
+    comment.topic = self.topicArray[indexPath.row];
+    
     [self.navigationController pushViewController:comment animated:YES];
 }
 @end

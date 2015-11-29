@@ -13,6 +13,7 @@
 		8E1970781C081AE6005FE8D3 /* BSCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E1970761C081AE6005FE8D3 /* BSCommentViewController.xib */; };
 		8E19707C1C081B39005FE8D3 /* BSCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E19707A1C081B39005FE8D3 /* BSCommentCell.m */; };
 		8E19707D1C081B39005FE8D3 /* BSCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E19707B1C081B39005FE8D3 /* BSCommentCell.xib */; };
+		8E1970801C085F18005FE8D3 /* BSCommentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E19707F1C085F18005FE8D3 /* BSCommentHeaderView.m */; };
 		8E24C4E31BE7894B00AEE4A3 /* BSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E24C4E21BE7894B00AEE4A3 /* BSTabBar.m */; };
 		8E33191F1BF0679600DE0A08 /* BSRecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E33191E1BF0679600DE0A08 /* BSRecommendCategory.m */; };
 		8E3319221BF067A600DE0A08 /* BSRecommendUsers.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3319211BF067A600DE0A08 /* BSRecommendUsers.m */; };
@@ -104,6 +105,8 @@
 		8E1970791C081B39005FE8D3 /* BSCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSCommentCell.h; sourceTree = "<group>"; };
 		8E19707A1C081B39005FE8D3 /* BSCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSCommentCell.m; sourceTree = "<group>"; };
 		8E19707B1C081B39005FE8D3 /* BSCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSCommentCell.xib; sourceTree = "<group>"; };
+		8E19707E1C085F18005FE8D3 /* BSCommentHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSCommentHeaderView.h; sourceTree = "<group>"; };
+		8E19707F1C085F18005FE8D3 /* BSCommentHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSCommentHeaderView.m; sourceTree = "<group>"; };
 		8E24C4E11BE7894B00AEE4A3 /* BSTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTabBar.h; sourceTree = "<group>"; };
 		8E24C4E21BE7894B00AEE4A3 /* BSTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTabBar.m; sourceTree = "<group>"; };
 		8E33191D1BF0679600DE0A08 /* BSRecommendCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommendCategory.h; sourceTree = "<group>"; };
@@ -305,13 +308,6 @@
 			name = Topic;
 			sourceTree = "<group>";
 		};
-		8EB54CE31C0346640076A901 /* Tools(工具) */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Tools(工具)";
-			sourceTree = "<group>";
-		};
 		8EF6BBFA1BE5E58B0081E76E = {
 			isa = PBXGroup;
 			children = (
@@ -381,7 +377,6 @@
 				8EF6BC611BE5F02C0081E76E /* Setting(设置) */,
 				8EF6BC481BE5F02C0081E76E /* Main(主要) */,
 				8EF6BC581BE5F02C0081E76E /* Other(其他) */,
-				8EB54CE31C0346640076A901 /* Tools(工具) */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -441,6 +436,8 @@
 				8E1970791C081B39005FE8D3 /* BSCommentCell.h */,
 				8E19707A1C081B39005FE8D3 /* BSCommentCell.m */,
 				8E19707B1C081B39005FE8D3 /* BSCommentCell.xib */,
+				8E19707E1C085F18005FE8D3 /* BSCommentHeaderView.h */,
+				8E19707F1C085F18005FE8D3 /* BSCommentHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -904,6 +901,7 @@
 				8EF6BC661BE5F02C0081E76E /* BSTabBarController.m in Sources */,
 				8E3319281BF067E300DE0A08 /* BSRecommendUsersCell.m in Sources */,
 				8E66BCB41BF19E15004BF3B5 /* BSVoiceViewController.m in Sources */,
+				8E1970801C085F18005FE8D3 /* BSCommentHeaderView.m in Sources */,
 				8EFF50831BF72121006DBBAE /* BSTopic.m in Sources */,
 				8EF6BC6E1BE5F0870081E76E /* BSFriendTrendsViewController.m in Sources */,
 				8EED47791C018228001D54B4 /* BSBigImageViewController.m in Sources */,

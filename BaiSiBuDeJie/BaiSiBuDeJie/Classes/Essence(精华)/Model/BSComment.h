@@ -14,4 +14,13 @@
 @property (nonatomic, copy) NSString *content;
 /** 用户 */
 @property (nonatomic, strong) BSUser *user;
+/** 点赞数 */
+@property (nonatomic, copy) NSString *like_count;
+/** 评论ID */
+@property (nonatomic, copy) NSString *ID;
+
+/** 声音评论的时长 */
+@property (nonatomic, assign) NSInteger voicetime;
+/** 声音评论的url */
+@property (nonatomic, copy) NSString *voiceuri;
 @end

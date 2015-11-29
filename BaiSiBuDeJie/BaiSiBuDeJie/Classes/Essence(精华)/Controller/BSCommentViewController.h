@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+@class BSTopic;
 
 @interface BSCommentViewController : UIViewController
-
+/** 帖子模型 */
+@property (nonatomic, strong) BSTopic *topic;
 @end

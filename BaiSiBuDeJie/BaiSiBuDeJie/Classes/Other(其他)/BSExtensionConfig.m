@@ -10,11 +10,18 @@
 #import <MJExtension.h>
 #import "BSRecommendCategory.h"
 #import "BSTopic.h"
-
+#
 @implementation BSExtensionConfig
 
 + (void)load{
-    [BSRecommendCategory setupReplacedKeyFromPropertyName:^NSDictionary *{
+//    [BSRecommendCategory setupReplacedKeyFromPropertyName:^NSDictionary *{
+//        return @{
+//                 @"ID" : @"id",
+//                 };
+//    }];
+    
+    // 因为BSTopic/BSComment/BSRecommendCategory都有id属性
+    [NSObject setupReplacedKeyFromPropertyName:^NSDictionary *{
         return @{
                  @"ID" : @"id",
                  };
@@ -22,12 +29,13 @@
     
     [BSTopic setupReplacedKeyFromPropertyName:^NSDictionary *{
         return @{
-                 @"ID" : @"id",
                  @"top_cmt" : @"top_cmt[0]",
                  @"smallImage" : @"image0",
                  @"largeImage" : @"image1",
                  @"middleImage" : @"image2",
                  };
     }];
+    
+    
 }
 @end

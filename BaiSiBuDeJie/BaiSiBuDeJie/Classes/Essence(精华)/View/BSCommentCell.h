@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+@class BSComment;
 
 @interface BSCommentCell : UITableViewCell
-
+/** 评论模型 */
+@property (nonatomic, strong) BSComment *comment;
 @end
