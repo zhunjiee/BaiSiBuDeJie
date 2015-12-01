@@ -83,7 +83,7 @@
 
     static NSString *image = nil;
     
-#warning 利用AFNetworking根据网络环境下载图片
+#warning 利用AFNetworking判断网络环境 下载图片
     [self.manager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
         switch (status) {
             case 0:

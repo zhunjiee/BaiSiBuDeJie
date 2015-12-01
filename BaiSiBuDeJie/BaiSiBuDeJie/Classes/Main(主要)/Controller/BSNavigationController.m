@@ -47,9 +47,13 @@
         [button setImage:[UIImage imageNamed:@"navigationButtonReturnClick"] forState:UIControlStateHighlighted];
         [button setTitle:@"返回" forState:UIControlStateNormal];
         [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [button setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
+        [button setTitleColor:BSColor(251, 32, 37, 100) forState:UIControlStateHighlighted];
+        // 按钮里面的内容朝左移动10
+        button.contentEdgeInsets = UIEdgeInsetsMake(0, -10, 0, 0);
         [button sizeToFit];
+        
         [button addTarget:self action:@selector(cancelButtonClick) forControlEvents:UIControlEventTouchUpInside];
+        
         viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
     }
     

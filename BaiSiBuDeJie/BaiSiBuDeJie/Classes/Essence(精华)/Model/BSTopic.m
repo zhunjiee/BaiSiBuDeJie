@@ -129,14 +129,15 @@
     CGFloat textY = 55;
     CGFloat textMaxW = [UIScreen mainScreen].bounds.size.width - 2 * BSMargin;
     CGFloat textH = [self.text boundingRectWithSize:CGSizeMake(textMaxW, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:17]} context:nil].size.height;
-    _cellHeight = textY + textH;
+    
+    _cellHeight = textY + textH + BSMargin;
     
     // 有中间的内容
     if (self.type != BSTopicTypeWord) {
         CGFloat centerViewX = BSMargin;
-        CGFloat centerViewW = [UIScreen mainScreen].bounds.size.width - 2 * BSMargin;
-        CGFloat centerViewH = centerViewW / self.width * self.height;
-        CGFloat centerViewY = textH + textY;
+        CGFloat centerViewY = textH + textY + BSMargin;
+        CGFloat centerViewW = textMaxW;
+        CGFloat centerViewH = centerViewW * self.height / self.width;
         
         if (centerViewH >= [UIScreen mainScreen].bounds.size.height) {
             centerViewH = 200;

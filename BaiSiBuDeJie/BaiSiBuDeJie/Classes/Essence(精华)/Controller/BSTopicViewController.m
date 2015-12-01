@@ -52,6 +52,8 @@ static NSString * const BSCellID = @"topic";
 }
 
 - (void)setUpTableView{
+    self.tableView.backgroundColor = BSGlobalColor;
+    
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset = UIEdgeInsetsMake(BSNavMaxY + BSTitleViewH, 0, BSTabBarH, 0);
     

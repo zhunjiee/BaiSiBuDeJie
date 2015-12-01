@@ -39,6 +39,7 @@
 @property (nonatomic, weak) BSTopicVoiceView *voiceView;
 /** 视频空间 */
 @property (nonatomic, weak) BSTopicVideoView *videoView;
+
 @end
 
 @implementation BSTopicCell
@@ -70,6 +71,7 @@
     }
     return _videoView;
 }
+
 
 #pragma mark - 初始化设置
 - (void)awakeFromNib {
@@ -158,6 +160,14 @@
     }else{
         [button setTitle:[NSString stringWithFormat:@"%zd", count] forState:UIControlStateNormal];
     }
+}
+
+
+// 重写frame的setter方法,设置 cell的间距 为 BSMargin
+- (void)setFrame:(CGRect)frame{
+//    frame.origin.y += BSMargin;
+    frame.size.height -= BSMargin;
+    [super setFrame:frame];
 }
 
 @end

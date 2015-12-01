@@ -53,6 +53,7 @@
 		8EB192FB1C075F37005EC5A7 /* BSTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB192FA1C075F37005EC5A7 /* BSTopicViewController.m */; };
 		8EB2932F1BEDF9A000E6E15C /* BSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB2932E1BEDF9A000E6E15C /* BSWebViewController.m */; };
 		8EB293331BEDFF9600E6E15C /* BSWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EB293321BEDFF9600E6E15C /* BSWebViewController.xib */; };
+		8EB327761C0DB21700667861 /* BSAVPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB327741C0DB21700667861 /* BSAVPlayer.m */; };
 		8EBA9B6A1BED9D320016819F /* UITextField+BSPlaceholderColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBA9B691BED9D320016819F /* UITextField+BSPlaceholderColor.m */; };
 		8EBA9B6D1BEDD07F0016819F /* BSMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBA9B6C1BEDD07F0016819F /* BSMeCell.m */; };
 		8EBA9B701BEDD4390016819F /* BSFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBA9B6F1BEDD4390016819F /* BSFooterView.m */; };
@@ -180,6 +181,9 @@
 		8EB2932D1BEDF9A000E6E15C /* BSWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSWebViewController.h; sourceTree = "<group>"; };
 		8EB2932E1BEDF9A000E6E15C /* BSWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSWebViewController.m; sourceTree = "<group>"; };
 		8EB293321BEDFF9600E6E15C /* BSWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSWebViewController.xib; sourceTree = "<group>"; };
+		8EB327731C0DB21700667861 /* BSAVPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSAVPlayer.h; sourceTree = "<group>"; };
+		8EB327741C0DB21700667861 /* BSAVPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSAVPlayer.m; sourceTree = "<group>"; };
+		8EB327751C0DB21700667861 /* ZJSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJSingleton.h; sourceTree = "<group>"; };
 		8EBA9B681BED9D320016819F /* UITextField+BSPlaceholderColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+BSPlaceholderColor.h"; sourceTree = "<group>"; };
 		8EBA9B691BED9D320016819F /* UITextField+BSPlaceholderColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+BSPlaceholderColor.m"; sourceTree = "<group>"; };
 		8EBA9B6B1BEDD07F0016819F /* BSMeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMeCell.h; sourceTree = "<group>"; };
@@ -306,6 +310,16 @@
 				8EED47C21C01BAA0001D54B4 /* BSTopicVideoView.xib */,
 			);
 			name = Topic;
+			sourceTree = "<group>";
+		};
+		8EB327721C0DB21700667861 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				8EB327731C0DB21700667861 /* BSAVPlayer.h */,
+				8EB327741C0DB21700667861 /* BSAVPlayer.m */,
+				8EB327751C0DB21700667861 /* ZJSingleton.h */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 		8EF6BBFA1BE5E58B0081E76E = {
@@ -609,6 +623,7 @@
 		8EF6BC581BE5F02C0081E76E /* Other(其他) */ = {
 			isa = PBXGroup;
 			children = (
+				8EB327721C0DB21700667861 /* Tools */,
 				8EF6BC5B1BE5F02C0081E76E /* Category */,
 				8EFDA5AD1BE9FBE900D53ABB /* BSHTTPSessionManager.h */,
 				8EFDA5AE1BE9FBE900D53ABB /* BSHTTPSessionManager.m */,
@@ -898,6 +913,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E24C4E31BE7894B00AEE4A3 /* BSTabBar.m in Sources */,
+				8EB327761C0DB21700667861 /* BSAVPlayer.m in Sources */,
 				8EF6BC661BE5F02C0081E76E /* BSTabBarController.m in Sources */,
 				8E3319281BF067E300DE0A08 /* BSRecommendUsersCell.m in Sources */,
 				8E66BCB41BF19E15004BF3B5 /* BSVoiceViewController.m in Sources */,

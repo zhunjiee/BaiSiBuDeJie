@@ -15,6 +15,7 @@
 #import "BSHTTPSessionManager.h"
 #import "BSCommentCell.h"
 #import "BSCommentHeaderView.h"
+#import "BSTopicCell.h"
 
 @interface BSCommentViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *inputCommentView;
@@ -28,6 +29,8 @@
 /** 最新评论 */
 @property (nonatomic, strong) NSMutableArray *lastestComment;
 
+/** 保存最热评论 */
+@property (nonatomic, strong) id top_cmt;
 @end
 
 @implementation BSCommentViewController
@@ -57,21 +60,11 @@ static NSString * const BSCommentHeaderID = @"header";
     [self setUpRefresh];
     [self loadNewComments];
     
+    [self setUpTableHeaderView];
+    
     // 注册监听
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
-    
-    UIView *headerView = [[UIView alloc] init];
-    headerView.height = 200;
-    headerView.backgroundColor = [UIColor redColor];
-    self.commentTableView.tableHeaderView = headerView;
-    
-    
 }
-
-- (void)dealloc{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
 
 - (void)setUpTableView{
 #warning 估算cell的高度
@@ -81,6 +74,43 @@ static NSString * const BSCommentHeaderID = @"header";
     // 注册cell
     [self.commentTableView registerNib:[UINib nibWithNibName:NSStringFromClass([BSCommentCell class]) bundle:nil] forCellReuseIdentifier:BSCommentID];
     [self.commentTableView registerClass:[BSCommentHeaderView class] forHeaderFooterViewReuseIdentifier:BSCommentHeaderID];
+}
+
+- (void)setUpTableHeaderView{
+#warning 加载顶部帖子内容(头部控件)
+    // 处理模型数据,如果有最热评论,就清空最热评论,然后高度置为0,重新计算高度
+    if (self.topic.top_cmt) {
+        self.top_cmt = self.topic.top_cmt;
+        self.topic.top_cmt = nil; // 先清空模型,再高度置0,就可以重新计算cell的高度
+        self.topic.cellHeight = 0;
+    }
+    
+    UIView *headerView = [[UIView alloc] init];
+    BSTopicCell *headerCell = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([BSTopicCell class]) owner:nil options:nil].firstObject;
+    
+    headerCell.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, self.topic.cellHeight);
+    
+    // 传递模型设置数据
+    headerCell.topic = self.topic;
+    
+    [headerView addSubview:headerCell];
+    
+    // 设置headerView的高度
+    headerView.height = headerCell.height + BSMargin;
+    
+    self.commentTableView.tableHeaderView = headerView; // 由于系统会反复调用BSTopicCell的setFrame方法，cell的frame被我们重写为调用一次就减小10，所以采用嵌套，调用headerView的就没关系了
+}
+
+
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
+    // 将最热评论还原重新计算外面的cell的高度
+    if (self.top_cmt) {
+        self.topic.top_cmt = self.top_cmt;
+        self.topic.cellHeight = 0;
+    }
+    
 }
 
 #pragma mark 设置数据
@@ -262,7 +292,7 @@ static NSString * const BSCommentHeaderID = @"header";
 
 #warning 自定义header视图
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    BSCommentHeaderView *headerView = [[BSCommentHeaderView alloc] init];
+    BSCommentHeaderView *headerView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:BSCommentHeaderID];
     
     if (self.hotestComment.count && section == 0) {
         headerView.text = @"最热评论";

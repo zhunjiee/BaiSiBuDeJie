@@ -30,11 +30,15 @@
     }
     return _player;
 }
+
 + (instancetype)videoView{
     return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil].firstObject;
 }
 
 - (void)awakeFromNib{
+    self.autoresizingMask = UIViewAutoresizingNone;
+    
+    // 去除默认的autoresizingMask设置
     self.autoresizingMask = UIViewAutoresizingNone;
     
     self.imageView.userInteractionEnabled = YES;

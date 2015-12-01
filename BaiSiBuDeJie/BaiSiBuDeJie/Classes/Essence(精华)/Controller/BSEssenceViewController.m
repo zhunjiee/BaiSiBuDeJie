@@ -77,7 +77,7 @@
     [self addChildViewController:word];
     
     UIViewController *add = [[UIViewController alloc] init];
-    add.title = @"增加+";
+    add.title = @"更多+";
     [self addChildViewController:add];
 }
 
@@ -96,7 +96,7 @@
 - (void)setUpScrollView{
     UIScrollView *scrollView = [[UIScrollView alloc] init];
     scrollView.frame = self.view.frame;
-    scrollView.backgroundColor = BSRandomColor;
+    scrollView.backgroundColor = BSGlobalColor;
     
     self.automaticallyAdjustsScrollViewInsets = NO;
     

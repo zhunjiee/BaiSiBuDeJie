@@ -10,6 +10,8 @@
 #import <UIImageView+WebCache.h>
 #import "BSTopic.h"
 #import <AVFoundation/AVFoundation.h>
+#import "BSBigImageViewController.h"
+#import "BSAVPlayer.h"
 
 @interface BSTopicVoiceView ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -17,15 +19,16 @@
 @property (weak, nonatomic) IBOutlet UILabel *playCountLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *placeholderView;
 /** 播放器 */
-@property (nonatomic, strong) AVPlayer *player;
+@property (nonatomic, strong) BSAVPlayer *player;
 @end
 
 @implementation BSTopicVoiceView
 /** player的懒加载 */
-- (AVPlayer *)player{
+- (BSAVPlayer *)player{
     if (!_player) {
-        _player = [[AVPlayer alloc] initWithURL:[NSURL URLWithString:self.topic.voiceuri]];
+        _player = [[BSAVPlayer alloc] initWithURL:[NSURL URLWithString:self.topic.voiceuri]];
     }
+    
     return _player;
 }
 + (instancetype)voiceView{
@@ -35,9 +38,25 @@
 - (void)awakeFromNib{
     self.imageView.userInteractionEnabled = YES;
     
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(selector)];
+    // 去除默认的autoresizingMask设置
+    self.autoresizingMask = UIViewAutoresizingNone;
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(seeBigImage)];
     [self.imageView addGestureRecognizer:tap];
 }
+
+- (void)seeBigImage{
+    // 图片正在加载时点击无效
+    if (self.imageView.image == nil) {
+        return;
+    }
+    
+    BSBigImageViewController *bigImage = [[BSBigImageViewController alloc] init];
+    // 写在后面会报NaN(Not a Number)的错误，因为先modal过去，topic还是0
+    bigImage.topic = self.topic;
+    [self.window.rootViewController presentViewController:bigImage animated:YES completion:nil];
+}
+
 
 - (void)setTopic:(BSTopic *)topic{
     _topic = topic;
@@ -72,6 +91,5 @@
     }
     
 }
-
 
 @end
