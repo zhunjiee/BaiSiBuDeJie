@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		21991D521084464CC5EB1F6C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A2F39AD052C5E138FCDB7F /* libPods.a */; };
+		8E096A4F1C11D220007CFDB6 /* BSStatusBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E096A4E1C11D220007CFDB6 /* BSStatusBarViewController.m */; };
 		8E1970731C081A54005FE8D3 /* BSNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF6BC701BE5F0DD0081E76E /* BSNewViewController.m */; };
 		8E1970771C081AE6005FE8D3 /* BSCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1970751C081AE6005FE8D3 /* BSCommentViewController.m */; };
 		8E1970781C081AE6005FE8D3 /* BSCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E1970761C081AE6005FE8D3 /* BSCommentViewController.xib */; };
@@ -100,6 +101,8 @@
 
 /* Begin PBXFileReference section */
 		3A3F197724067FC86704FE8B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		8E096A4D1C11D220007CFDB6 /* BSStatusBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSStatusBarViewController.h; sourceTree = "<group>"; };
+		8E096A4E1C11D220007CFDB6 /* BSStatusBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSStatusBarViewController.m; sourceTree = "<group>"; };
 		8E1970741C081AE6005FE8D3 /* BSCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSCommentViewController.h; sourceTree = "<group>"; };
 		8E1970751C081AE6005FE8D3 /* BSCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSCommentViewController.m; sourceTree = "<group>"; };
 		8E1970761C081AE6005FE8D3 /* BSCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSCommentViewController.xib; sourceTree = "<group>"; };
@@ -523,6 +526,8 @@
 				8EF6BC4B1BE5F02C0081E76E /* BSNavigationController.m */,
 				8EF6BC4C1BE5F02C0081E76E /* BSTabBarController.h */,
 				8EF6BC4D1BE5F02C0081E76E /* BSTabBarController.m */,
+				8E096A4D1C11D220007CFDB6 /* BSStatusBarViewController.h */,
+				8E096A4E1C11D220007CFDB6 /* BSStatusBarViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -969,6 +974,7 @@
 				8EF6BC671BE5F02C0081E76E /* AppDelegate.m in Sources */,
 				8EAE2DD61BFEF49900D3376F /* BSComment.m in Sources */,
 				8E431F3B1BEF29940018B812 /* BSClearCachesCell.m in Sources */,
+				8E096A4F1C11D220007CFDB6 /* BSStatusBarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
