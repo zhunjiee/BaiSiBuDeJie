@@ -49,6 +49,15 @@ static NSString * const BSCellID = @"topic";
     [self setUpTableView];
     
     [self setUpRefresh];
+    
+#warning 监听重复点击通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarButtonDidRepeatClick) name:BSTabBarButtonDidRepeatClickNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(titleButtonDidRepeatClick) name:BSTitleButtonDidRepeatClickNotification object:nil];
+}
+
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)setUpTableView{
@@ -167,6 +176,29 @@ static NSString * const BSCellID = @"topic";
     }];
 }
 
+
+#pragma mark - 监听通知
+- (void)tabBarButtonDidRepeatClick{
+    // 如果控制器的view不在窗口上,就直接返回
+    if (self.view.window == nil) {
+        return;
+    }
+    
+    // 坐标系转换
+    CGRect viewRect = [self.view convertRect:self.view.bounds toView:nil];
+    CGRect windowRect = self.view.window.bounds;
+    // 如果没有交叉,就返回
+    if (!CGRectIntersectsRect(windowRect, viewRect)) {
+        return;
+    }
+    
+    // 只有当前控制器的view显示在窗口上才刷新
+    [self.tableView.header beginRefreshing];
+}
+
+- (void)titleButtonDidRepeatClick{
+    [self tabBarButtonDidRepeatClick];
+}
 
 
 #pragma mark - Table View Date Source

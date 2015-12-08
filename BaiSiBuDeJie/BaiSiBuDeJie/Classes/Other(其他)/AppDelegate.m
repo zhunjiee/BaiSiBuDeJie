@@ -9,23 +9,38 @@
 #import "AppDelegate.h"
 #import "BSTabBarController.h"
 
-@interface AppDelegate ()
-
+@interface AppDelegate () <UITabBarControllerDelegate>
+/** 上一次点击tabBarButton的位置 */
+@property (nonatomic, assign) NSUInteger preSelectedTabBarBtnIndex;
 @end
 
 @implementation AppDelegate
+#pragma mark - UITabBarControllerDelegate
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
+    if (self.preSelectedTabBarBtnIndex == tabBarController.selectedIndex) {
+        // 向外发送TabBar重复点击的通知
+        [[NSNotificationCenter defaultCenter] postNotificationName:BSTabBarButtonDidRepeatClickNotification object:nil];
+    }
+    self.preSelectedTabBarBtnIndex = tabBarController.selectedIndex;
+}
 
 
+#pragma mark - UIApplicationDelegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // 1. 创建主窗口
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     // 2. 设置根控制器
     BSTabBarController *root = [[BSTabBarController alloc] init];
+    root.delegate = self;
     self.window.rootViewController = root;
     
     // 3. 显示主窗口
     [self.window makeKeyAndVisible];
+    
+    
+    // 显示盖住状态栏的控制器
+    [BSStatusBarViewController show];
     
     return YES;
 }

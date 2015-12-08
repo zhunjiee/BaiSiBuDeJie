@@ -22,6 +22,8 @@
 @property (nonatomic, weak) UIView *titleIndicatorView;
 /** 滚动视图 */
 @property (nonatomic, weak) UIScrollView *scrollView;
+/** 标题滚动视图 */
+@property (nonatomic, weak) UIScrollView *titleScroll;
 /** 存放titleButton的数组 */
 @property (nonatomic, strong) NSMutableArray *titleButtonArray;
 @end
@@ -122,7 +124,7 @@
 //    }
 }
 
-
+#define titleButtonW (self.view.width / 4)  // 标题按钮的宽度
 /**
  *  添加标题视图
  */
@@ -136,7 +138,7 @@
     titleScroll.showsVerticalScrollIndicator = NO;
     [self.view addSubview:titleScroll];
     
-    CGFloat titleButtonW = self.view.width / 4;
+//    CGFloat titleButtonW = self.view.width / 4;
     NSInteger count = self.childViewControllers.count;
     
     titleScroll.contentSize = CGSizeMake(titleButtonW * count, 0);
@@ -146,7 +148,7 @@
     UIView *titleView = [[UIView alloc] init];
     titleView.frame = CGRectMake(0, 0, titleButtonW * count, BSTitleViewH);
     [titleScroll addSubview:titleView];
-    
+    self.titleScroll = titleScroll;
     
     // ---创建并添加titleButton到titleView
     for (int i = 0; i < count; i++) {
@@ -187,19 +189,32 @@
 }
 
 #pragma mark - 监听方法
-- (void)titleButtonClick:(BSTitleButton *)button{
+- (void)titleButtonClick:(BSTitleButton *)titleButton{
+#warning 监听titleButton重复点击
+    if (self.selectedButton == titleButton) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:BSTitleButtonDidRepeatClickNotification object:nil];
+    }
+    
+    [self dealingTitleButtonClick:titleButton];
+}
+
+- (void)dealingTitleButtonClick:(BSTitleButton *)titleButton{
+    // 设置被选中按钮
+    // 让以前被选中的按钮恢复默认状态(取消选中)
     self.selectedButton.selected = NO;
-    button.selected = YES;
-    self.selectedButton = button;
+    // 让现在被点击的按钮变成选中状态(改变颜色)
+    titleButton.selected = YES;
+    // 被点击的标题按钮 变成 选中状态的按钮
+    self.selectedButton = titleButton;
     
     // 指示器跟随移动
     [UIView animateWithDuration:0.25 animations:^{
-        self.titleIndicatorView.centerX = button.centerX;
+        self.titleIndicatorView.centerX = titleButton.centerX;
     }];
     
     // 滚动到指定视图
     CGPoint offset = self.scrollView.contentOffset;
-    offset.x = button.tag * self.scrollView.width;
+    offset.x = titleButton.tag * self.scrollView.width;
     [self.scrollView setContentOffset:offset animated:YES];
 }
 
@@ -239,10 +254,20 @@
     // 计算索引
     int index = self.scrollView.contentOffset.x / self.scrollView.width;
     BSTitleButton *titleButton = self.titleButtonArray[index];
-    [self titleButtonClick:titleButton];
-    
+    [self dealingTitleButtonClick:titleButton];
     
     [self addChildVCView];
+    
+    
+#warning 判断标题滚动视图是否要自动滚动
+    if (self.selectedButton.x + titleButtonW > BSScreenW) {
+        CGFloat offsetX = self.selectedButton.x + titleButtonW - BSScreenW;
+        
+        [self.titleScroll setContentOffset:CGPointMake(offsetX, 0) animated:YES];
+    }else{
+        [self.titleScroll setContentOffset:CGPointMake(0, 0) animated:YES];
+    }
+    
 }
 
 /**

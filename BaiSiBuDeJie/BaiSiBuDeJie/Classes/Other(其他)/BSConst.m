@@ -17,3 +17,9 @@ CGFloat const BSTabBarH = 49;
 
 /** titleView的高度 */
 CGFloat const BSTitleViewH = 40;
+
+/** 重复点击TabBar按钮的通知 */
+NSString * const BSTabBarButtonDidRepeatClickNotification = @"BSTabBarButtonDidRepeatClickNotification";
+
+/** 重复点击titleView按钮的通知 */
+NSString * const BSTitleButtonDidRepeatClickNotification = @"BSTitleButtonDidRepeatClickNotification";

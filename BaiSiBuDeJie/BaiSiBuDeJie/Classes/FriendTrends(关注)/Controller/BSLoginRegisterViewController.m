@@ -15,9 +15,14 @@
 
 @implementation BSLoginRegisterViewController
 
+//  设置状态栏
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [BSStatusBarViewController sharedStatusBarViewController].statusBarStyle = UIStatusBarStyleLightContent;
+}
+- (void)viewWillDisappear:(BOOL)animated{
+   [BSStatusBarViewController sharedStatusBarViewController].statusBarStyle = UIStatusBarStyleDefault;
 }
 
 /**
@@ -42,9 +47,9 @@
 }
 
 
-- (UIStatusBarStyle)preferredStatusBarStyle{
-    return UIStatusBarStyleLightContent;
-}
+//- (UIStatusBarStyle)preferredStatusBarStyle{
+//    return UIStatusBarStyleLightContent;
+//}
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [self.view endEditing:YES];

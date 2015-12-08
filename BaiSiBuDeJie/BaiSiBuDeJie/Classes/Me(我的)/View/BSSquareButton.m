@@ -28,7 +28,7 @@
     [super layoutSubviews];
     
     // 图片位置
-    self.imageView.width = self.width - 3 * BSMargin;
+    self.imageView.width = self.width - 4 * BSMargin;
     self.imageView.height = self.imageView.width;
     self.imageView.centerX =self.width * 0.5;
     self.imageView.y = self.height * 0.1;

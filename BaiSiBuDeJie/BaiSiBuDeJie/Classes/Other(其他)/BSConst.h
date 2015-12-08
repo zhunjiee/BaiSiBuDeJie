@@ -17,3 +17,9 @@ UIKIT_EXTERN CGFloat const BSTabBarH;
 
 /** titleView的高度 */
 UIKIT_EXTERN CGFloat const BSTitleViewH;
+
+/** 重复点击TabBar按钮的通知 */
+UIKIT_EXTERN NSString * const BSTabBarButtonDidRepeatClickNotification;
+
+/** 重复点击titleView按钮的通知 */
+UIKIT_EXTERN NSString * const BSTitleButtonDidRepeatClickNotification;

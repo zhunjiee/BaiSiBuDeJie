@@ -101,7 +101,7 @@ static UIWindow *window_;
         CGRect windowRect = scrollView.window.bounds;
         
         // 判断 scrollView 和 window 是否重合
-        if (CGRectIntersectsRect(windowRect, scrollViewRect)) {
+        if (!CGRectIntersectsRect(windowRect, scrollViewRect)) {
             return;
         }
         
