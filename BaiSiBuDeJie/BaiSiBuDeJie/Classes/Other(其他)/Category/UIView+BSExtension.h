@@ -21,4 +21,9 @@
 @property (nonatomic, assign) CGFloat centerX;
 /** centerY */
 @property (nonatomic, assign) CGFloat centerY;
+
+
+// 从xib中加载控件
++ (instancetype)loadViewFromXib;
+
 @end

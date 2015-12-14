@@ -32,6 +32,8 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
+
+#warning 占位文字实现方式一:drawRect:方法
 /**
  *  每次调用drawRect:方法,都会将以前画得东西抹掉
  */
@@ -46,7 +48,7 @@
     attrs[NSForegroundColorAttributeName] = self.placeholderColor;
     
     // 画文字
-    BSLog(@"%@", NSStringFromCGRect(self.bounds)); //{{0, -64}, {375, 667}}
+//    BSLog(@"%@", NSStringFromCGRect(self.bounds)); //{{0, -64}, {375, 667}}
     
     rect.origin.x = 5;
     rect.origin.y = 8;
@@ -63,6 +65,8 @@
 #pragma mark - setter方法
 - (void)setPlaceholder:(NSString *)placeholder{
     _placeholder = [placeholder copy];
+    
+    [self setNeedsDisplay];
     
 }
 - (void)setPlaceholderColor:(UIColor *)placeholderColor

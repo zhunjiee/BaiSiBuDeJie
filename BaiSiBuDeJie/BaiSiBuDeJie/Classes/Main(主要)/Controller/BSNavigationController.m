@@ -15,16 +15,30 @@
 @implementation BSNavigationController
 
 + (void)initialize{
-    // 统一设置导航栏背景
+    /** 设置UINavigationBar */
     UINavigationBar *bar = [UINavigationBar appearance];
+    // 统一设置导航栏背景
     [bar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
+    // 设置导航栏 标题文字 相关属性
+    NSMutableDictionary *titleAttrs = [NSMutableDictionary dictionary];
+    titleAttrs[NSFontAttributeName] = [UIFont boldSystemFontOfSize:20]; // 粗体
+    [bar setTitleTextAttributes:titleAttrs];
     
-    // 设置导航栏文字相关属性
-    NSMutableDictionary *Attrs = [NSMutableDictionary dictionary];
-    Attrs[NSFontAttributeName] = [UIFont boldSystemFontOfSize:20];
-    [bar setTitleTextAttributes:Attrs];
     
+    /** 设置UIBarButtonItem */
+    UIBarButtonItem *item = [UIBarButtonItem appearance];
+    // 设置导航栏 左右按钮文字 相关属性
+    // UIControlStateNormal
+    NSMutableDictionary *normalAttrs = [NSMutableDictionary dictionary];
+    normalAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:17];
+    normalAttrs[NSForegroundColorAttributeName] = [UIColor blackColor];
+    [item setTitleTextAttributes:normalAttrs forState:UIControlStateNormal];
+    // UIControlStateDisabled
+    NSMutableDictionary *disableAttrs = [NSMutableDictionary dictionary];
+    disableAttrs[NSForegroundColorAttributeName] = [UIColor grayColor];
+    [item setTitleTextAttributes:disableAttrs forState:UIControlStateDisabled];
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     

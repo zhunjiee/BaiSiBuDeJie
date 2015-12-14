@@ -10,6 +10,11 @@
 
 @implementation UIView (BSExtension)
 
+// 从xib中加载控件
++(instancetype)loadViewFromXib{
+    return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil].lastObject;
+}
+
 - (void)setWidth:(CGFloat)width{
     CGRect tempFrame = self.frame;
     tempFrame.size.width = width;

@@ -30,6 +30,9 @@
 		8E5BFF4C1BEBB28D00541669 /* BSLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5BFF4B1BEBB28D00541669 /* BSLoginRegisterViewController.m */; };
 		8E5CB9A61C1D7E8A00ABBFB8 /* BSPostWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5CB9A51C1D7E8A00ABBFB8 /* BSPostWordViewController.m */; };
 		8E5CB9A91C1DA7FE00ABBFB8 /* BSPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5CB9A81C1DA7FE00ABBFB8 /* BSPlaceholderTextView.m */; };
+		8E5CB9AC1C1EBC0500ABBFB8 /* BSPostWordToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5CB9AB1C1EBC0500ABBFB8 /* BSPostWordToolbar.m */; };
+		8E5CB9AE1C1EBC1900ABBFB8 /* BSPostWordToolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E5CB9AD1C1EBC1900ABBFB8 /* BSPostWordToolbar.xib */; };
+		8E5CB9B11C1EEF0800ABBFB8 /* BSAddTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5CB9B01C1EEF0800ABBFB8 /* BSAddTagViewController.m */; };
 		8E66BCAB1BF19DCC004BF3B5 /* BSAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E66BCAA1BF19DCC004BF3B5 /* BSAllViewController.m */; };
 		8E66BCAE1BF19DE7004BF3B5 /* BSPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E66BCAD1BF19DE7004BF3B5 /* BSPictureViewController.m */; };
 		8E66BCB11BF19E08004BF3B5 /* BSVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E66BCB01BF19E08004BF3B5 /* BSVideoViewController.m */; };
@@ -143,6 +146,11 @@
 		8E5CB9A51C1D7E8A00ABBFB8 /* BSPostWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPostWordViewController.m; sourceTree = "<group>"; };
 		8E5CB9A71C1DA7FE00ABBFB8 /* BSPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPlaceholderTextView.h; sourceTree = "<group>"; };
 		8E5CB9A81C1DA7FE00ABBFB8 /* BSPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPlaceholderTextView.m; sourceTree = "<group>"; };
+		8E5CB9AA1C1EBC0500ABBFB8 /* BSPostWordToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPostWordToolbar.h; sourceTree = "<group>"; };
+		8E5CB9AB1C1EBC0500ABBFB8 /* BSPostWordToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPostWordToolbar.m; sourceTree = "<group>"; };
+		8E5CB9AD1C1EBC1900ABBFB8 /* BSPostWordToolbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSPostWordToolbar.xib; sourceTree = "<group>"; };
+		8E5CB9AF1C1EEF0800ABBFB8 /* BSAddTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSAddTagViewController.h; sourceTree = "<group>"; };
+		8E5CB9B01C1EEF0800ABBFB8 /* BSAddTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSAddTagViewController.m; sourceTree = "<group>"; };
 		8E66BCA91BF19DCC004BF3B5 /* BSAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSAllViewController.h; sourceTree = "<group>"; };
 		8E66BCAA1BF19DCC004BF3B5 /* BSAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSAllViewController.m; sourceTree = "<group>"; };
 		8E66BCAC1BF19DE7004BF3B5 /* BSPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPictureViewController.h; sourceTree = "<group>"; };
@@ -692,6 +700,8 @@
 				8EAC13F41BE8DEE500AA0CF3 /* BSPublishViewController.xib */,
 				8E5CB9A41C1D7E8A00ABBFB8 /* BSPostWordViewController.h */,
 				8E5CB9A51C1D7E8A00ABBFB8 /* BSPostWordViewController.m */,
+				8E5CB9AF1C1EEF0800ABBFB8 /* BSAddTagViewController.h */,
+				8E5CB9B01C1EEF0800ABBFB8 /* BSAddTagViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -710,6 +720,9 @@
 				8E2F8D101C19674300BEE2B0 /* BSPublishButton.m */,
 				8E5CB9A71C1DA7FE00ABBFB8 /* BSPlaceholderTextView.h */,
 				8E5CB9A81C1DA7FE00ABBFB8 /* BSPlaceholderTextView.m */,
+				8E5CB9AA1C1EBC0500ABBFB8 /* BSPostWordToolbar.h */,
+				8E5CB9AB1C1EBC0500ABBFB8 /* BSPostWordToolbar.m */,
+				8E5CB9AD1C1EBC1900ABBFB8 /* BSPostWordToolbar.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -863,6 +876,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E5CB9AE1C1EBC1900ABBFB8 /* BSPostWordToolbar.xib in Resources */,
 				8EFF50881BF727EF006DBBAE /* BSTopicCell.xib in Resources */,
 				8EAE2DDE1BFF195F00D3376F /* BSTopicPictureView.xib in Resources */,
 				8EF6BC131BE5E58B0081E76E /* Assets.xcassets in Resources */,
@@ -933,6 +947,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E24C4E31BE7894B00AEE4A3 /* BSTabBar.m in Sources */,
+				8E5CB9B11C1EEF0800ABBFB8 /* BSAddTagViewController.m in Sources */,
 				8EB327761C0DB21700667861 /* BSAVPlayer.m in Sources */,
 				8EF6BC661BE5F02C0081E76E /* BSTabBarController.m in Sources */,
 				8E3319281BF067E300DE0A08 /* BSRecommendUsersCell.m in Sources */,
@@ -976,6 +991,7 @@
 				8E66BCAE1BF19DE7004BF3B5 /* BSPictureViewController.m in Sources */,
 				8EBA9B6A1BED9D320016819F /* UITextField+BSPlaceholderColor.m in Sources */,
 				8EBA9B731BEDDB020016819F /* BSSquareButton.m in Sources */,
+				8E5CB9AC1C1EBC0500ABBFB8 /* BSPostWordToolbar.m in Sources */,
 				8E66BCBA1BF205FB004BF3B5 /* BSTitleButton.m in Sources */,
 				8E83EF561BE9F6D70098413D /* BSTagSubCell.m in Sources */,
 				8E83EF4F1BE9B8D50098413D /* UIBarButtonItem+BSExtension.m in Sources */,
