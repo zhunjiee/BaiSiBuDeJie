@@ -20,7 +20,8 @@
 - (void)awakeFromNib{
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setImage:[UIImage imageNamed:@"tag_add_icon"] forState:UIControlStateNormal];
-    button.y = 4;
+    button.x = BSSmallMargin;
+    button.y = BSSmallMargin;
     [button sizeToFit];
     [self.topView addSubview:button];
     

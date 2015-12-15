@@ -89,10 +89,7 @@
     self.navigationItem.title = @"发表文字";
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStyleDone target:self action:@selector(cancel)];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"发表" style:UIBarButtonItemStyleDone target:self action:@selector(postWord)];
-//    // 设置文字颜色
-//    [self.navigationItem.leftBarButtonItem setTintColor:[UIColor blackColor]];
-//    [self.navigationItem.rightBarButtonItem setTintColor:[UIColor blackColor]];
-    
+ 
     // 刚进入界面"发表"按钮无法点击
     self.navigationItem.rightBarButtonItem.enabled = NO;
     
