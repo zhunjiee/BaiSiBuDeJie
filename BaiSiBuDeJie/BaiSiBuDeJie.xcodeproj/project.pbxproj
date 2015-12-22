@@ -33,6 +33,7 @@
 		8E5CB9AC1C1EBC0500ABBFB8 /* BSPostWordToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5CB9AB1C1EBC0500ABBFB8 /* BSPostWordToolbar.m */; };
 		8E5CB9AE1C1EBC1900ABBFB8 /* BSPostWordToolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E5CB9AD1C1EBC1900ABBFB8 /* BSPostWordToolbar.xib */; };
 		8E5CB9B11C1EEF0800ABBFB8 /* BSAddTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5CB9B01C1EEF0800ABBFB8 /* BSAddTagViewController.m */; };
+		8E63B8A51C299AA600472EC2 /* BSTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E63B8A41C299AA600472EC2 /* BSTextField.m */; };
 		8E66BCAB1BF19DCC004BF3B5 /* BSAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E66BCAA1BF19DCC004BF3B5 /* BSAllViewController.m */; };
 		8E66BCAE1BF19DE7004BF3B5 /* BSPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E66BCAD1BF19DE7004BF3B5 /* BSPictureViewController.m */; };
 		8E66BCB11BF19E08004BF3B5 /* BSVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E66BCB01BF19E08004BF3B5 /* BSVideoViewController.m */; };
@@ -81,6 +82,7 @@
 		8EF6BC681BE5F02C0081E76E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF6BC5C1BE5F02C0081E76E /* main.m */; };
 		8EF6BC6E1BE5F0870081E76E /* BSFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF6BC6D1BE5F0870081E76E /* BSFriendTrendsViewController.m */; };
 		8EF6BC741BE5F0E90081E76E /* BSMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF6BC731BE5F0E90081E76E /* BSMeViewController.m */; };
+		8EFB27A11C2122D30046C037 /* BSTagButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EFB27A01C2122D30046C037 /* BSTagButton.m */; };
 		8EFDA5AF1BE9FBE900D53ABB /* BSHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EFDA5AE1BE9FBE900D53ABB /* BSHTTPSessionManager.m */; };
 		8EFF50831BF72121006DBBAE /* BSTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EFF50821BF72121006DBBAE /* BSTopic.m */; };
 		8EFF50871BF727EF006DBBAE /* BSTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EFF50851BF727EF006DBBAE /* BSTopicCell.m */; };
@@ -151,6 +153,8 @@
 		8E5CB9AD1C1EBC1900ABBFB8 /* BSPostWordToolbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSPostWordToolbar.xib; sourceTree = "<group>"; };
 		8E5CB9AF1C1EEF0800ABBFB8 /* BSAddTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSAddTagViewController.h; sourceTree = "<group>"; };
 		8E5CB9B01C1EEF0800ABBFB8 /* BSAddTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSAddTagViewController.m; sourceTree = "<group>"; };
+		8E63B8A31C299AA600472EC2 /* BSTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTextField.h; sourceTree = "<group>"; };
+		8E63B8A41C299AA600472EC2 /* BSTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTextField.m; sourceTree = "<group>"; };
 		8E66BCA91BF19DCC004BF3B5 /* BSAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSAllViewController.h; sourceTree = "<group>"; };
 		8E66BCAA1BF19DCC004BF3B5 /* BSAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSAllViewController.m; sourceTree = "<group>"; };
 		8E66BCAC1BF19DE7004BF3B5 /* BSPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPictureViewController.h; sourceTree = "<group>"; };
@@ -246,6 +250,8 @@
 		8EF6BC721BE5F0E90081E76E /* BSMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMeViewController.h; sourceTree = "<group>"; };
 		8EF6BC731BE5F0E90081E76E /* BSMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMeViewController.m; sourceTree = "<group>"; };
 		8EF6BC751BE5F6AC0081E76E /* BaiSiBuDeJie.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaiSiBuDeJie.pch; sourceTree = "<group>"; };
+		8EFB279F1C2122D30046C037 /* BSTagButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTagButton.h; sourceTree = "<group>"; };
+		8EFB27A01C2122D30046C037 /* BSTagButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTagButton.m; sourceTree = "<group>"; };
 		8EFDA5AD1BE9FBE900D53ABB /* BSHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSHTTPSessionManager.h; sourceTree = "<group>"; };
 		8EFDA5AE1BE9FBE900D53ABB /* BSHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSHTTPSessionManager.m; sourceTree = "<group>"; };
 		8EFF50811BF72121006DBBAE /* BSTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTopic.h; sourceTree = "<group>"; };
@@ -723,6 +729,10 @@
 				8E5CB9AA1C1EBC0500ABBFB8 /* BSPostWordToolbar.h */,
 				8E5CB9AB1C1EBC0500ABBFB8 /* BSPostWordToolbar.m */,
 				8E5CB9AD1C1EBC1900ABBFB8 /* BSPostWordToolbar.xib */,
+				8EFB279F1C2122D30046C037 /* BSTagButton.h */,
+				8EFB27A01C2122D30046C037 /* BSTagButton.m */,
+				8E63B8A31C299AA600472EC2 /* BSTextField.h */,
+				8E63B8A41C299AA600472EC2 /* BSTextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -967,6 +977,7 @@
 				8E2F8D111C19674300BEE2B0 /* BSPublishButton.m in Sources */,
 				8E83EF5A1BE9F9260098413D /* BSTagSub.m in Sources */,
 				8EED47BC1C01BA70001D54B4 /* BSTopicVoiceView.m in Sources */,
+				8EFB27A11C2122D30046C037 /* BSTagButton.m in Sources */,
 				8E5CB9A91C1DA7FE00ABBFB8 /* BSPlaceholderTextView.m in Sources */,
 				8E66BCAB1BF19DCC004BF3B5 /* BSAllViewController.m in Sources */,
 				8EFDA5AF1BE9FBE900D53ABB /* BSHTTPSessionManager.m in Sources */,
@@ -1004,6 +1015,7 @@
 				8E8270931BEA239C00031498 /* BSConst.m in Sources */,
 				8EAC13F51BE8DEE500AA0CF3 /* BSPublishViewController.m in Sources */,
 				8E3319221BF067A600DE0A08 /* BSRecommendUsers.m in Sources */,
+				8E63B8A51C299AA600472EC2 /* BSTextField.m in Sources */,
 				8E431F381BEF179E0018B812 /* BSSettingViewController.m in Sources */,
 				8EF6BC671BE5F02C0081E76E /* AppDelegate.m in Sources */,
 				8EAE2DD61BFEF49900D3376F /* BSComment.m in Sources */,

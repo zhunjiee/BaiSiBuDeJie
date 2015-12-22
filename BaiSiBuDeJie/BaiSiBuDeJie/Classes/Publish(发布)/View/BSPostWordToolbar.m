@@ -12,7 +12,8 @@
 
 @interface BSPostWordToolbar ()
 @property (weak, nonatomic) IBOutlet UIView *topView;
-
+/** 所有的标签label数组 */
+@property (nonatomic, strong) NSMutableArray *tagLabels;
 @end
 
 @implementation BSPostWordToolbar
@@ -35,7 +36,13 @@
  *  这种做法遵从了MVC思想---view里不应该有控制器
  */
 - (void)addButtonClick{
+    BSWeakSelf;
     BSAddTagViewController *addTag = [[BSAddTagViewController alloc] init];
+    
+    addTag.getTagsBlock = ^(NSArray *tags){
+        [weakSelf ]
+    };
+    
     BSNavigationController *nav = [[BSNavigationController alloc] initWithRootViewController:addTag];
     
     // 拿到根控制器
@@ -44,5 +51,9 @@
     UIViewController *postWord = root.presentedViewController;
     
     [postWord presentViewController:nav animated:YES completion:nil];
+}
+
+- (void)createTagLabels:(NSArray *)tags{
+    
 }
 @end

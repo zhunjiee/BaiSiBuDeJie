@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 @class BSComment;
 
-typedef enum {
+typedef NS_ENUM(NSInteger, BSTopicType) {
     /** 全部 */
     BSTopicTypeAll = 1,
     /** 图片 */
@@ -20,7 +20,7 @@ typedef enum {
     BSTopicTypeVoice = 31,
     /** 视频 */
     BSTopicTypeVideo = 41
-} BSTopicType;
+};
 
 @interface BSTopic : NSObject
 /** 用户的名字 */
