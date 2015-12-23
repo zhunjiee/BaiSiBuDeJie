@@ -11,6 +11,6 @@
 @interface BSAddTagViewController : UIViewController
 /** 传递标签数据的block，block的参数是一个字符串的数组 */
 @property (nonatomic, copy) void (^getTagsBlock)(NSArray *);
-/** 从这个界面传递到上一个界面的标签数据 */
+/** 从上一个界面传递过来的标签数据 */
 @property (nonatomic, strong) NSArray *tags;
 @end

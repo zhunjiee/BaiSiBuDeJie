@@ -72,6 +72,16 @@
     [self setUpContentView];
     
     [self setUpTextField];
+    
+    [self setupTags];
+}
+
+// 设置默认的tag标签
+- (void)setupTags{
+    for (NSString *tag in self.tags) {
+        self.textField.text = tag;
+        [self tipButtonClick];
+    }
 }
 
 /**
@@ -100,6 +110,7 @@
     textField.placeholderColor = [UIColor grayColor];
     textField.placeholder = @"多个标签用逗号或者换行隔开";
 //    [textField setValue:[UIColor grayColor] forKeyPath:@"placeholderLabel.textColor"];
+    textField.delegate = self;
     
     [self.contentView addSubview:textField];
     self.textField = textField;
@@ -170,6 +181,7 @@
  */
 - (void)tipButtonClick{
     if (self.textField.hasText == NO) return;
+    
     if (self.tagButtonArray.count == 5) {
         [SVProgressHUD showErrorWithStatus:@"最多添加5个标签" maskType:SVProgressHUDMaskTypeBlack];
         return;
@@ -234,6 +246,7 @@
  *  完成
  */
 - (void)doneButtonClick{
+#warning 逆传：传递数据给上一个界面
     // 1. 传递数据给上一个界面
 //    NSMutableArray *tags = [NSMutableArray array];
 //    for (BSTagButton *tagButton in self.tagButtonArray) {
@@ -305,6 +318,7 @@
 #pragma mark - UITextFieldDelegate
 // 点击了键盘的return按钮
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    BSLog(@"return");
     [self tipButtonClick];
     return YES;
 }
