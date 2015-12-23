@@ -52,7 +52,8 @@
 - (void)addButtonClick{
     BSWeakSelf;
     BSAddTagViewController *addTag = [[BSAddTagViewController alloc] init];
-#warning 逆传：后一个页面返回的
+
+#warning 逆传：后一个页面返回的标签数组
     addTag.getTagsBlock = ^(NSArray *tags){
         [weakSelf createTagLabels:tags];
     };
